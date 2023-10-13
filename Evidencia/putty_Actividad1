@@ -1,0 +1,334 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2023.10.13 14:54:22 =~=~=~=~=~=~=~=~=~=~=~=
+login as: ubuntu
+ubuntu@192.168.1.26's password: 
+Welcome to Ubuntu 18.04.4 LTS (GNU/Linux 4.15.0-213-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri Oct 13 19:54:29 UTC 2023
+
+  System load:                    0.03
+  Usage of /:                     62.3% of 19.52GB
+  Memory usage:                   46%
+  Swap usage:                     0%
+  Processes:                      117
+  Users logged in:                1
+  IP address for enp0s3:          192.168.1.26
+  IP address for br-bc7a2450eb71: 172.21.0.1
+  IP address for br-bfd587c371c8: 172.19.0.1
+  IP address for docker0:         172.17.0.1
+  IP address for br-d9c46ef903c9: 172.18.0.1
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+94 packages can be updated.
+1 update is a security update.
+
+New release '20.04.6 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Fri Oct 13 19:20:31 2023 from 192.168.1.9
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ [K]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ docker network inspect
+"docker network inspect" requires at least 1 argument.
+See 'docker network inspect --help'.
+
+Usage:  docker network inspect [OPTIONS] NETWORK [NETWORK...]
+
+Display detailed information on one or more networks
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ ls
+[0m[01;34mDS-M4-Cluster_Hadoop[0m  [01;34mDS-M4-Herramientas_Big_Data[0m  [01;34mDS-M4-Hue_Hive[0m  [01;34mDS-M4-PgAdmin_Postgres[0m  [01;34mdockerdata[0m
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ cd DS-M4-Herramientas_Big_Data
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ ls
+[0m[01;34mDatasets[0m                 Paso04_ConConsulta.hql                  docker-compose.yml
+Generacion_Ventas.ipynb  Paso05.py                               ejemploNeo4J.txt
+[01;34mMongo[0m                    Paso06_GeneracionVentasNuevasPorDia.py  hadoop-hive.env
+[01;34mParquet[0m                  Paso06_IncrementalVentas.py             hadoop.env
+Paso00.sh                README.md                               hbase-distributed-local.env
+Paso01.sh                docker-compose-kafka.yml                iris.hql
+Paso02.hql               docker-compose-v1.yml                   pruebaPySpark.py
+Paso02_ConConsultas.hql  docker-compose-v2.yml                   pruebaScala.scala
+Paso03.hql               docker-compose-v3.yml                   pyspark-ETL.ipynb
+Paso04.hql               docker-compose-v4.yml
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ docker-compose --version
+docker-compose version 1.17.1, build unknown
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ docker-compose --version[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ksudo docker-compose -f docker-compose-vX.yml up -d[C[1P[1@1
+[sudo] password for ubuntu: 
+nodemanager is up-to-date
+historyserver is up-to-date
+datanode is up-to-date
+resourcemanager is up-to-date
+namenode is up-to-date
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ sudo docker exec -it namenode bash
+root@6dc7be8c4f41:/# ls
+KEYS  boot  entrypoint.sh  hadoop	home  lib64  mnt  proc	run	sbin  sys  usr
+bin   dev   etc		   hadoop-data	lib   media  opt  root	run.sh	srv   tmp  var
+root@6dc7be8c4f41:/# cd home
+root@6dc7be8c4f41:/home# ls
+Datasets
+root@6dc7be8c4f41:/home# cd Datasets
+root@6dc7be8c4f41:/home/Datasets# s ls
+calendario    cliente  data_nvo  gasto	   iris.json	 producto   raw-flight-data.csv  tipodegasto
+canaldeventa  compra   empleado  iris.csv  personal.csv  proveedor  sucursal		 venta
+root@6dc7be8c4f41:/home/Datasets# exit
+exit
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ ls
+[0m[01;34mDatasets[0m                 Paso04_ConConsulta.hql                  docker-compose.yml
+Generacion_Ventas.ipynb  Paso05.py                               ejemploNeo4J.txt
+[01;34mMongo[0m                    Paso06_GeneracionVentasNuevasPorDia.py  hadoop-hive.env
+[01;34mParquet[0m                  Paso06_IncrementalVentas.py             hadoop.env
+Paso00.sh                README.md                               hbase-distributed-local.env
+Paso01.sh                docker-compose-kafka.yml                iris.hql
+Paso02.hql               docker-compose-v1.yml                   pruebaPySpark.py
+Paso02_ConConsultas.hql  docker-compose-v2.yml                   pruebaScala.scala
+Paso03.hql               docker-compose-v3.yml                   pyspark-ETL.ipynb
+Paso04.hql               docker-compose-v4.yml
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ cd Datasets
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Data/Datasetsubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data/Datasets$ ls
+[0m[01;34mcalendario[0m    [01;34mcliente[0m  [01;34mdata_nvo[0m  [01;34mgasto[0m     iris.json     [01;34mproducto[0m   raw-flight-data.csv  [01;34mtipodegasto[0m
+[01;34mcanaldeventa[0m  [01;34mcompra[0m   [01;34mempleado[0m  iris.csv  personal.csv  [01;34mproveedor[0m  [01;34msucursal[0m             [01;34mventa[0m
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Data/Datasetsubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data/Datasets$ cd ..
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ pwd
+/home/ubuntu/DS-M4-Herramientas_Big_Data
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ sudo docker exec -it namenode bash
+[sudo] password for ubuntu: 
+root@6dc7be8c4f41:/# ls
+KEYS  boot  entrypoint.sh  hadoop	home  lib64  mnt  proc	run	sbin  sys  usr
+bin   dev   etc		   hadoop-data	lib   media  opt  root	run.sh	srv   tmp  var
+root@6dc7be8c4f41:/# sudo docker ps  ps
+bash: sudo: command not found
+root@6dc7be8c4f41:/# sudo docker ps  container ps
+bash: sudo: command not found
+root@6dc7be8c4f41:/# clear
+[3J[H[2Jroot@6dc7be8c4f41:/# exit
+exit
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$   sudo docker exec -it namenode bash
+root@6dc7be8c4f41:/# ls
+KEYS  boot  entrypoint.sh  hadoop	home  lib64  mnt  proc	run	sbin  sys  usr
+bin   dev   etc		   hadoop-data	lib   media  opt  root	run.sh	srv   tmp  var
+root@6dc7be8c4f41:/# hdfs dfs /data     ls
+ls: Unknown command
+Did you mean -ls?  This command begins with a dash.
+Usage: hadoop fs [generic options]
+	[-appendToFile <localsrc> ... <dst>]
+	[-cat [-ignoreCrc] <src> ...]
+	[-checksum <src> ...]
+	[-chgrp [-R] GROUP PATH...]
+	[-chmod [-R] <MODE[,MODE]... | OCTALMODE> PATH...]
+	[-chown [-R] [OWNER][:[GROUP]] PATH...]
+	[-copyFromLocal [-f] [-p] [-l] [-d] [-t <thread count>] <localsrc> ... <dst>]
+	[-copyToLocal [-f] [-p] [-ignoreCrc] [-crc] <src> ... <localdst>]
+	[-count [-q] [-h] [-v] [-t [<storage type>]] [-u] [-x] [-e] <path> ...]
+	[-cp [-f] [-p | -p[topax]] [-d] <src> ... <dst>]
+	[-createSnapshot <snapshotDir> [<snapshotName>]]
+	[-deleteSnapshot <snapshotDir> <snapshotName>]
+	[-df [-h] [<path> ...]]
+	[-du [-s] [-h] [-v] [-x] <path> ...]
+	[-expunge [-immediate]]
+	[-find <path> ... <expression> ...]
+	[-get [-f] [-p] [-ignoreCrc] [-crc] <src> ... <localdst>]
+	[-getfacl [-R] <path>]
+	[-getfattr [-R] {-n name | -d} [-e en] <path>]
+	[-getmerge [-nl] [-skip-empty-file] <src> <localdst>]
+	[-head <file>]
+	[-help [cmd ...]]
+	[-ls [-C] [-d] [-h] [-q] [-R] [-t] [-S] [-r] [-u] [-e] [<path> ...]]
+	[-mkdir [-p] <path> ...]
+	[-moveFromLocal <localsrc> ... <dst>]
+	[-moveToLocal <src> <localdst>]
+	[-mv <src> ... <dst>]
+	[-put [-f] [-p] [-l] [-d] <localsrc> ... <dst>]
+	[-renameSnapshot <snapshotDir> <oldName> <newName>]
+	[-rm [-f] [-r|-R] [-skipTrash] [-safely] <src> ...]
+	[-rmdir [--ignore-fail-on-non-empty] <dir> ...]
+	[-setfacl [-R] [{-b|-k} {-m|-x <acl_spec>} <path>]|[--set <acl_spec> <path>]]
+	[-setfattr {-n name [-v value] | -x name} <path>]
+	[-setrep [-R] [-w] <rep> <path> ...]
+	[-stat [format] <path> ...]
+	[-tail [-f] [-s <sleep interval>] <file>]
+	[-test -[defswrz] <path>]
+	[-text [-ignoreCrc] <src> ...]
+	[-touch [-a] [-m] [-t TIMESTAMP ] [-c] <path> ...]
+	[-touchz <path> ...]
+	[-truncate [-w] <length> <path> ...]
+	[-usage [cmd ...]]
+
+Generic options supported are:
+-conf <configuration file>        specify an application configuration file
+-D <property=value>               define a value for a given property
+-fs <file:///|hdfs://namenode:port> specify default filesystem URL to use, overrides 'fs.defaultFS' property from configurations.
+-jt <local|resourcemanager:port>  specify a ResourceManager
+-files <file1,...>                specify a comma-separated list of files to be copied to the map reduce cluster
+-libjars <jar1,...>               specify a comma-separated list of jar files to be included in the classpath
+-archives <archive1,...>          specify a comma-separated list of archives to be unarchived on the compute machines
+
+The general command line syntax is:
+command [genericOptions] [commandOptions]
+
+root@6dc7be8c4f41:/# cd  hdfs dfs ls  cd /data
+cd: Unknown command
+Usage: hadoop fs [generic options]
+	[-appendToFile <localsrc> ... <dst>]
+	[-cat [-ignoreCrc] <src> ...]
+	[-checksum <src> ...]
+	[-chgrp [-R] GROUP PATH...]
+	[-chmod [-R] <MODE[,MODE]... | OCTALMODE> PATH...]
+	[-chown [-R] [OWNER][:[GROUP]] PATH...]
+	[-copyFromLocal [-f] [-p] [-l] [-d] [-t <thread count>] <localsrc> ... <dst>]
+	[-copyToLocal [-f] [-p] [-ignoreCrc] [-crc] <src> ... <localdst>]
+	[-count [-q] [-h] [-v] [-t [<storage type>]] [-u] [-x] [-e] <path> ...]
+	[-cp [-f] [-p | -p[topax]] [-d] <src> ... <dst>]
+	[-createSnapshot <snapshotDir> [<snapshotName>]]
+	[-deleteSnapshot <snapshotDir> <snapshotName>]
+	[-df [-h] [<path> ...]]
+	[-du [-s] [-h] [-v] [-x] <path> ...]
+	[-expunge [-immediate]]
+	[-find <path> ... <expression> ...]
+	[-get [-f] [-p] [-ignoreCrc] [-crc] <src> ... <localdst>]
+	[-getfacl [-R] <path>]
+	[-getfattr [-R] {-n name | -d} [-e en] <path>]
+	[-getmerge [-nl] [-skip-empty-file] <src> <localdst>]
+	[-head <file>]
+	[-help [cmd ...]]
+	[-ls [-C] [-d] [-h] [-q] [-R] [-t] [-S] [-r] [-u] [-e] [<path> ...]]
+	[-mkdir [-p] <path> ...]
+	[-moveFromLocal <localsrc> ... <dst>]
+	[-moveToLocal <src> <localdst>]
+	[-mv <src> ... <dst>]
+	[-put [-f] [-p] [-l] [-d] <localsrc> ... <dst>]
+	[-renameSnapshot <snapshotDir> <oldName> <newName>]
+	[-rm [-f] [-r|-R] [-skipTrash] [-safely] <src> ...]
+	[-rmdir [--ignore-fail-on-non-empty] <dir> ...]
+	[-setfacl [-R] [{-b|-k} {-m|-x <acl_spec>} <path>]|[--set <acl_spec> <path>]]
+	[-setfattr {-n name [-v value] | -x name} <path>]
+	[-setrep [-R] [-w] <rep> <path> ...]
+	[-stat [format] <path> ...]
+	[-tail [-f] [-s <sleep interval>] <file>]
+	[-test -[defswrz] <path>]
+	[-text [-ignoreCrc] <src> ...]
+	[-touch [-a] [-m] [-t TIMESTAMP ] [-c] <path> ...]
+	[-touchz <path> ...]
+	[-truncate [-w] <length> <path> ...]
+	[-usage [cmd ...]]
+
+Generic options supported are:
+-conf <configuration file>        specify an application configuration file
+-D <property=value>               define a value for a given property
+-fs <file:///|hdfs://namenode:port> specify default filesystem URL to use, overrides 'fs.defaultFS' property from configurations.
+-jt <local|resourcemanager:port>  specify a ResourceManager
+-files <file1,...>                specify a comma-separated list of files to be copied to the map reduce cluster
+-libjars <jar1,...>               specify a comma-separated list of jar files to be included in the classpath
+-archives <archive1,...>          specify a comma-separated list of archives to be unarchived on the compute machines
+
+The general command line syntax is:
+command [genericOptions] [commandOptions]
+
+root@6dc7be8c4f41:/# clear
+[3J[H[2Jroot@6dc7be8c4f41:/# exit
+exit
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ sudo docker ps
+[sudo] password for ubuntu: 
+CONTAINER ID   IMAGE                                                    COMMAND                  CREATED        STATUS                       PORTS                                                                                  NAMES
+d4d63e93f5d4   bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8   "/entrypoint.sh /run…"   25 hours ago   Up About an hour (healthy)   8088/tcp                                                                               resourcemanager
+18e6cdf0715b   bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8     "/entrypoint.sh /run…"   25 hours ago   Up About an hour (healthy)   8188/tcp                                                                               historyserver
+6dc7be8c4f41   bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /run…"   25 hours ago   Up About an hour (healthy)   0.0.0.0:9870->9870/tcp, :::9870->9870/tcp, 0.0.0.0:9010->9000/tcp, :::9010->9000/tcp   namenode
+1785245a7b31   bde2020/hadoop-nodemanager:2.0.0-hadoop3.2.1-java8       "/entrypoint.sh /run…"   25 hours ago   Up About an hour (healthy)   8042/tcp                                                                               nodemanager
+a64ac55c37b7   bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /run…"   25 hours ago   Up About an hour (healthy)   0.0.0.0:9864->9864/tcp, :::9864->9864/tcp                                              datanode
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ sudo docker exec -it namenode bash
+root@6dc7be8c4f41:/# ls
+KEYS  boot  entrypoint.sh  hadoop	home  lib64  mnt  proc	run	sbin  sys  usr
+bin   dev   etc		   hadoop-data	lib   media  opt  root	run.sh	srv   tmp  var
+root@6dc7be8c4f41:/# hdfs dfs ls/_ fs ls/^C
+root@6dc7be8c4f41:/# hdfs dfs ls/
+ls/: Unknown command
+Usage: hadoop fs [generic options]
+	[-appendToFile <localsrc> ... <dst>]
+	[-cat [-ignoreCrc] <src> ...]
+	[-checksum <src> ...]
+	[-chgrp [-R] GROUP PATH...]
+	[-chmod [-R] <MODE[,MODE]... | OCTALMODE> PATH...]
+	[-chown [-R] [OWNER][:[GROUP]] PATH...]
+	[-copyFromLocal [-f] [-p] [-l] [-d] [-t <thread count>] <localsrc> ... <dst>]
+	[-copyToLocal [-f] [-p] [-ignoreCrc] [-crc] <src> ... <localdst>]
+	[-count [-q] [-h] [-v] [-t [<storage type>]] [-u] [-x] [-e] <path> ...]
+	[-cp [-f] [-p | -p[topax]] [-d] <src> ... <dst>]
+	[-createSnapshot <snapshotDir> [<snapshotName>]]
+	[-deleteSnapshot <snapshotDir> <snapshotName>]
+	[-df [-h] [<path> ...]]
+	[-du [-s] [-h] [-v] [-x] <path> ...]
+	[-expunge [-immediate]]
+	[-find <path> ... <expression> ...]
+	[-get [-f] [-p] [-ignoreCrc] [-crc] <src> ... <localdst>]
+	[-getfacl [-R] <path>]
+	[-getfattr [-R] {-n name | -d} [-e en] <path>]
+	[-getmerge [-nl] [-skip-empty-file] <src> <localdst>]
+	[-head <file>]
+	[-help [cmd ...]]
+	[-ls [-C] [-d] [-h] [-q] [-R] [-t] [-S] [-r] [-u] [-e] [<path> ...]]
+	[-mkdir [-p] <path> ...]
+	[-moveFromLocal <localsrc> ... <dst>]
+	[-moveToLocal <src> <localdst>]
+	[-mv <src> ... <dst>]
+	[-put [-f] [-p] [-l] [-d] <localsrc> ... <dst>]
+	[-renameSnapshot <snapshotDir> <oldName> <newName>]
+	[-rm [-f] [-r|-R] [-skipTrash] [-safely] <src> ...]
+	[-rmdir [--ignore-fail-on-non-empty] <dir> ...]
+	[-setfacl [-R] [{-b|-k} {-m|-x <acl_spec>} <path>]|[--set <acl_spec> <path>]]
+	[-setfattr {-n name [-v value] | -x name} <path>]
+	[-setrep [-R] [-w] <rep> <path> ...]
+	[-stat [format] <path> ...]
+	[-tail [-f] [-s <sleep interval>] <file>]
+	[-test -[defswrz] <path>]
+	[-text [-ignoreCrc] <src> ...]
+	[-touch [-a] [-m] [-t TIMESTAMP ] [-c] <path> ...]
+	[-touchz <path> ...]
+	[-truncate [-w] <length> <path> ...]
+	[-usage [cmd ...]]
+
+Generic options supported are:
+-conf <configuration file>        specify an application configuration file
+-D <property=value>               define a value for a given property
+-fs <file:///|hdfs://namenode:port> specify default filesystem URL to use, overrides 'fs.defaultFS' property from configurations.
+-jt <local|resourcemanager:port>  specify a ResourceManager
+-files <file1,...>                specify a comma-separated list of files to be copied to the map reduce cluster
+-libjars <jar1,...>               specify a comma-separated list of jar files to be included in the classpath
+-archives <archive1,...>          specify a comma-separated list of archives to be unarchived on the compute machines
+
+The general command line syntax is:
+command [genericOptions] [commandOptions]
+
+root@6dc7be8c4f41:/# hdfs dfs ls/   -ls
+ls: `.': No such file or directory
+root@6dc7be8c4f41:/# hdfs dfs -ls /
+Found 3 items
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data
+drwxr-xr-x   - root supergroup          0 2023-10-12 19:43 /rmstate
+drwx-wx-wx   - root supergroup          0 2023-10-12 20:52 /tmp
+root@6dc7be8c4f41:/# hdfs dfs -ls /     cd    -lsls/-ls[K[Khdfs dfs -lsls/ls[Kexit    d hdfs dfs -ls /dataa
+Found 16 items
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/calendario
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/canaldeventa
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/cliente
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/compra
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/data_nvo
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/empleado
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/gasto
+-rw-r--r--   3 root supergroup       4813 2023-10-12 20:09 /data/iris.csv
+-rw-r--r--   3 root supergroup      15802 2023-10-12 20:09 /data/iris.json
+-rw-r--r--   3 root supergroup         94 2023-10-12 20:09 /data/personal.csv
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/producto
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/proveedor
+-rw-r--r--   3 root supergroup   69772435 2023-10-12 20:09 /data/raw-flight-data.csv
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/sucursal
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/tipodegasto
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/venta
+root@6dc7be8c4f41:/# ^C
+root@6dc7be8c4f41:/# exit
+exit
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ exit
+logout

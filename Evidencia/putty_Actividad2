@@ -1,0 +1,688 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2023.10.13 15:49:03 =~=~=~=~=~=~=~=~=~=~=~=
+login as: ubuntu
+ubuntu@192.168.1.26's password: 
+Welcome to Ubuntu 18.04.4 LTS (GNU/Linux 4.15.0-213-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri Oct 13 20:49:08 UTC 2023
+
+  System load:                    0.0
+  Usage of /:                     62.3% of 19.52GB
+  Memory usage:                   47%
+  Swap usage:                     0%
+  Processes:                      116
+  Users logged in:                1
+  IP address for enp0s3:          192.168.1.26
+  IP address for br-bc7a2450eb71: 172.21.0.1
+  IP address for br-bfd587c371c8: 172.19.0.1
+  IP address for docker0:         172.17.0.1
+  IP address for br-d9c46ef903c9: 172.18.0.1
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+94 packages can be updated.
+1 update is a security update.
+
+New release '20.04.6 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Fri Oct 13 19:54:30 2023 from 192.168.1.9
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ ls
+[0m[01;34mDS-M4-Cluster_Hadoop[0m         [01;34mDS-M4-Hue_Hive[0m          [01;34mdockerdata[0m
+[01;34mDS-M4-Herramientas_Big_Data[0m  [01;34mDS-M4-PgAdmin_Postgres[0m
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ cd DS-M4-Herramientas_Big_Data 
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ ls
+[0m[01;34mDatasets[0m                                docker-compose-kafka.yml
+Generacion_Ventas.ipynb                 docker-compose-v1.yml
+[01;34mMongo[0m                                   docker-compose-v2.yml
+[01;34mParquet[0m                                 docker-compose-v3.yml
+Paso00.sh                               docker-compose-v4.yml
+Paso01.sh                               docker-compose.yml
+Paso02.hql                              ejemploNeo4J.txt
+Paso02_ConConsultas.hql                 hadoop-hive.env
+Paso03.hql                              hadoop.env
+Paso04.hql                              hbase-distributed-local.env
+Paso04_ConConsulta.hql                  iris.hql
+Paso05.py                               pruebaPySpark.py
+Paso06_GeneracionVentasNuevasPorDia.py  pruebaScala.scala
+Paso06_IncrementalVentas.py             pyspark-ETL.ipynb
+README.md
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ [K]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ sudo docker-compose -f docker-compose-v2.yml up -d
+[sudo] password for ubuntu: 
+resourcemanager is up-to-date
+Starting hive-metastore-postgresql ... 
+datanode is up-to-date
+Starting hive-metastore-postgresql
+historyserver is up-to-date
+Starting hive-metastore ... 
+namenode is up-to-date
+Starting hive-metastore
+nodemanager is up-to-date
+Starting hive-server ... 
+Starting hive-server
+[1A[2KStarting hive-metastore-postgresql ... [32mdone[0m[1B[1A[2KStarting hive-metastore ... [32mdone[0m[1B[1A[2KStarting hive-server ... [32mdone[0m[1B]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ sudo docker container ps
+CONTAINER ID   IMAGE                                                    COMMAND                  CREATED        STATUS                 PORTS                                                                                  NAMES
+404b59ede234   bde2020/hive:2.3.2-postgresql-metastore                  "entrypoint.sh /opt/…"   24 hours ago   Up 40 seconds          0.0.0.0:10000->10000/tcp, :::10000->10000/tcp, 10002/tcp                               hive-server
+1265c17a7604   bde2020/hive-metastore-postgresql:2.3.0                  "/docker-entrypoint.…"   24 hours ago   Up 40 seconds          0.0.0.0:5432->5432/tcp, :::5432->5432/tcp                                              hive-metastore-postgresql
+8d9fa6f82504   bde2020/hive:2.3.2-postgresql-metastore                  "entrypoint.sh /opt/…"   24 hours ago   Up 40 seconds          10000/tcp, 0.0.0.0:9083->9083/tcp, :::9083->9083/tcp, 10002/tcp                        hive-metastore
+d4d63e93f5d4   bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8   "/entrypoint.sh /run…"   25 hours ago   Up 2 hours (healthy)   8088/tcp                                                                               resourcemanager
+18e6cdf0715b   bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8     "/entrypoint.sh /run…"   25 hours ago   Up 2 hours (healthy)   8188/tcp                                                                               historyserver
+6dc7be8c4f41   bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /run…"   25 hours ago   Up 2 hours (healthy)   0.0.0.0:9870->9870/tcp, :::9870->9870/tcp, 0.0.0.0:9010->9000/tcp, :::9010->9000/tcp   namenode
+1785245a7b31   bde2020/hadoop-nodemanager:2.0.0-hadoop3.2.1-java8       "/entrypoint.sh /run…"   25 hours ago   Up 2 hours (healthy)   8042/tcp                                                                               nodemanager
+a64ac55c37b7   bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /run…"   25 hours ago   Up 2 hours (healthy)   0.0.0.0:9864->9864/tcp, :::9864->9864/tcp                                              datanode
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ sudo docker exec -it hive-server bash
+root@404b59ede234:/opt# hive
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in file:/opt/hive/conf/hive-log4j2.properties Async: true
+Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+hive> exit
+    > exit;
+NoViableAltException(24@[])
+	at org.apache.hadoop.hive.ql.parse.HiveParser.statement(HiveParser.java:1300)
+	at org.apache.hadoop.hive.ql.parse.ParseDriver.parse(ParseDriver.java:208)
+	at org.apache.hadoop.hive.ql.parse.ParseUtils.parse(ParseUtils.java:77)
+	at org.apache.hadoop.hive.ql.parse.ParseUtils.parse(ParseUtils.java:70)
+	at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:468)
+	at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1317)
+	at org.apache.hadoop.hive.ql.Driver.runInternal(Driver.java:1457)
+	at org.apache.hadoop.hive.ql.Driver.run(Driver.java:1237)
+	at org.apache.hadoop.hive.ql.Driver.run(Driver.java:1227)
+	at org.apache.hadoop.hive.cli.CliDriver.processLocalCmd(CliDriver.java:233)
+	at org.apache.hadoop.hive.cli.CliDriver.processCmd(CliDriver.java:184)
+	at org.apache.hadoop.hive.cli.CliDriver.processLine(CliDriver.java:403)
+	at org.apache.hadoop.hive.cli.CliDriver.executeDriver(CliDriver.java:821)
+	at org.apache.hadoop.hive.cli.CliDriver.run(CliDriver.java:759)
+	at org.apache.hadoop.hive.cli.CliDriver.main(CliDriver.java:686)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+FAILED: ParseException line 1:0 cannot recognize input near 'exit' 'exit' '<EOF>'
+hive> root@404b59ede234:/opt# 
+root@404b59ede234:/opt# exit
+exit
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ clear
+[3J[H[2J]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ hdfs dfs -ls /data
+
+Command 'hdfs' not found, did you mean:
+
+  command 'hdfls' from deb hdf4-tools
+  command 'hfs' from deb hfsutils-tcltk
+
+Try: sudo apt install <deb name>
+
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ sudo docker exec -it namenode bash
+root@6dc7be8c4f41:/# exithdfs dfs -ls /data
+Found 16 items
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/calendario
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/canaldeventa
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/cliente
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/compra
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/data_nvo
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/empleado
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/gasto
+-rw-r--r--   3 root supergroup       4813 2023-10-12 20:09 /data/iris.csv
+-rw-r--r--   3 root supergroup      15802 2023-10-12 20:09 /data/iris.json
+-rw-r--r--   3 root supergroup         94 2023-10-12 20:09 /data/personal.csv
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/producto
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/proveedor
+-rw-r--r--   3 root supergroup   69772435 2023-10-12 20:09 /data/raw-flight-data.csv
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/sucursal
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/tipodegasto
+drwxr-xr-x   - root supergroup          0 2023-10-12 20:09 /data/venta
+root@6dc7be8c4f41:/# pwd
+/
+root@6dc7be8c4f41:/# ^C
+root@6dc7be8c4f41:/# hive -f <Paso02_ConConsultas.hql>                                 sudo docker exec -it hive-server bash
+bash: sudo: command not found
+root@6dc7be8c4f41:/# exit
+exit
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ sudo docker exec -it namenode bash[16Phdfs dfs -ls /dataclear[Ksudo docker exec -it hive-server bash[13Pcontainer ps-compose -f docker-compose-v2.yml up -dls[Kcd DS-M4-Herramientas_Big_Data ls[Kexitsudo docker exec -it namenode bashps[Kexec -it namenode bashpwd[Kcd ..[3Plscd Datasets[K[K[K[K[K[K[K[K[K[K[Ksudo docker exec -it hive-server bash
+[sudo] password for ubuntu: 
+root@404b59ede234:/opt# hive
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in file:/opt/hive/conf/hive-log4j2.properties Async: true
+Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+hive> hive -f <Paso02_ConConsultas.hql>
+    > ;
+NoViableAltException(24@[])
+	at org.apache.hadoop.hive.ql.parse.HiveParser.statement(HiveParser.java:1300)
+	at org.apache.hadoop.hive.ql.parse.ParseDriver.parse(ParseDriver.java:208)
+	at org.apache.hadoop.hive.ql.parse.ParseUtils.parse(ParseUtils.java:77)
+	at org.apache.hadoop.hive.ql.parse.ParseUtils.parse(ParseUtils.java:70)
+	at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:468)
+	at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1317)
+	at org.apache.hadoop.hive.ql.Driver.runInternal(Driver.java:1457)
+	at org.apache.hadoop.hive.ql.Driver.run(Driver.java:1237)
+	at org.apache.hadoop.hive.ql.Driver.run(Driver.java:1227)
+	at org.apache.hadoop.hive.cli.CliDriver.processLocalCmd(CliDriver.java:233)
+	at org.apache.hadoop.hive.cli.CliDriver.processCmd(CliDriver.java:184)
+	at org.apache.hadoop.hive.cli.CliDriver.processLine(CliDriver.java:403)
+	at org.apache.hadoop.hive.cli.CliDriver.executeDriver(CliDriver.java:821)
+	at org.apache.hadoop.hive.cli.CliDriver.run(CliDriver.java:759)
+	at org.apache.hadoop.hive.cli.CliDriver.main(CliDriver.java:686)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+FAILED: ParseException line 1:0 cannot recognize input near 'hive' '-' 'f'
+hive> ls
+    > ;
+NoViableAltException(24@[])
+	at org.apache.hadoop.hive.ql.parse.HiveParser.statement(HiveParser.java:1300)
+	at org.apache.hadoop.hive.ql.parse.ParseDriver.parse(ParseDriver.java:208)
+	at org.apache.hadoop.hive.ql.parse.ParseUtils.parse(ParseUtils.java:77)
+	at org.apache.hadoop.hive.ql.parse.ParseUtils.parse(ParseUtils.java:70)
+	at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:468)
+	at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1317)
+	at org.apache.hadoop.hive.ql.Driver.runInternal(Driver.java:1457)
+	at org.apache.hadoop.hive.ql.Driver.run(Driver.java:1237)
+	at org.apache.hadoop.hive.ql.Driver.run(Driver.java:1227)
+	at org.apache.hadoop.hive.cli.CliDriver.processLocalCmd(CliDriver.java:233)
+	at org.apache.hadoop.hive.cli.CliDriver.processCmd(CliDriver.java:184)
+	at org.apache.hadoop.hive.cli.CliDriver.processLine(CliDriver.java:403)
+	at org.apache.hadoop.hive.cli.CliDriver.executeDriver(CliDriver.java:821)
+	at org.apache.hadoop.hive.cli.CliDriver.run(CliDriver.java:759)
+	at org.apache.hadoop.hive.cli.CliDriver.main(CliDriver.java:686)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+FAILED: ParseException line 1:0 cannot recognize input near 'ls' '<EOF>' '<EOF>'
+hive> exit;
+root@404b59ede234:/opt# exit
+exit
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ sudo docker exec -it hive-server bash
+root@404b59ede234:/opt# ls
+hadoop-2.7.4  hive
+root@404b59ede234:/opt# lsexit
+exit
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ sudo docker exec -it hive-server bash[Kls
+[0m[01;34mDatasets[0m                 Paso04_ConConsulta.hql                  docker-compose.yml
+Generacion_Ventas.ipynb  Paso05.py                               ejemploNeo4J.txt
+[01;34mMongo[0m                    Paso06_GeneracionVentasNuevasPorDia.py  hadoop-hive.env
+[01;34mParquet[0m                  Paso06_IncrementalVentas.py             hadoop.env
+Paso00.sh                README.md                               hbase-distributed-local.env
+Paso01.sh                docker-compose-kafka.yml                iris.hql
+Paso02.hql               docker-compose-v1.yml                   pruebaPySpark.py
+Paso02_ConConsultas.hql  docker-compose-v2.yml                   pruebaScala.scala
+Paso03.hql               docker-compose-v3.yml                   pyspark-ETL.ipynb
+Paso04.hql               docker-compose-v4.yml
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ pwg[Kd
+/home/ubuntu/DS-M4-Herramientas_Big_Data
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ sudo docker exec -it hive-server bash
+[sudo] password for ubuntu: 
+root@404b59ede234:/opt# ls
+hadoop-2.7.4  hive
+root@404b59ede234:/opt# docker cp /home/ubuntu/DS-M4-Herramientas_Big_Data/script.hql hive-server:/path/dentro/ contenedor
+bash: docker: command not found
+root@404b59ede234:/opt# sudo docker cp /home/ubuntu/DS-M4-Herramientas_Big_Data/script.hql hive-server:/
+bash: sudo: command not found
+root@404b59ede234:/opt# docker cp /home/ubuntu/DS-M4-Herramientas_Big_Data/script.hql hive-server:/
+bash: docker: command not found
+root@404b59ede234:/opt# sudo docker cp /home/ubuntu/DS-M4-Herramientas_Big_Data/Paso02_ConConsultas.hql hive-se rver:/
+bash: sudo: command not found
+root@404b59ede234:/opt# sudo docker cp /home/ubuntu/DS-M4-Herramientas_Big_Data/Paso02_ConConsultas.hql hive-se rver:/
+bash: sudo: command not found
+root@404b59ede234:/opt# docker cp /home/ubuntu/DS-M4-Herramientas_Big_Data/Paso02_ConConsultas.hql hive-server: /
+bash: docker: command not found
+root@404b59ede234:/opt# exit
+exit
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ sudo docker exec -it hive-server bash[Ksudo docker cp /home/ubuntu/DS-M4-Herramientas_Big_Data/Paaso02_ConConsultas.hql hive-server:/
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ sudo docker exec -it hive-server bash
+root@404b59ede234:/opt# ls
+hadoop-2.7.4  hive
+root@404b59ede234:/opt# hive -f /Paso02_ConConsultas.hql
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in file:/opt/hive/conf/hive-log4j2.properties Async: true
+OK
+Time taken: 3.937 seconds
+OK
+Time taken: 0.08 seconds
+OK
+Time taken: 0.13 seconds
+OK
+Time taken: 0.448 seconds
+OK
+Time taken: 2.388 seconds
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Query ID = root_20231013223736_eede30d2-ff63-4e51-87fc-68fb991c82e6
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2023-10-13 22:37:40,061 Stage-1 map = 0%,  reduce = 100%
+Ended Job = job_local288690028_0001
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+0
+Time taken: 3.611 seconds, Fetched: 1 row(s)
+OK
+Time taken: 0.038 seconds
+OK
+Time taken: 0.115 seconds
+OK
+Time taken: 0.411 seconds
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Query ID = root_20231013223740_1167deae-f445-4bb8-8ffe-94c5f4eba343
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2023-10-13 22:37:42,792 Stage-1 map = 0%,  reduce = 100%
+Ended Job = job_local812047488_0002
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+0
+Time taken: 1.996 seconds, Fetched: 1 row(s)
+OK
+Time taken: 0.06 seconds
+OK
+Time taken: 0.176 seconds
+OK
+Time taken: 0.229 seconds
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Query ID = root_20231013223743_920486ef-1829-4ebe-bcd7-8fb2b522a8f8
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2023-10-13 22:37:45,116 Stage-1 map = 0%,  reduce = 100%
+Ended Job = job_local1698364872_0003
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+0
+Time taken: 1.785 seconds, Fetched: 1 row(s)
+OK
+Time taken: 0.021 seconds
+OK
+Time taken: 0.165 seconds
+OK
+Time taken: 0.216 seconds
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Query ID = root_20231013223745_ac2384f6-a4ce-411b-9398-3f27a8e77f07
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2023-10-13 22:37:47,286 Stage-1 map = 0%,  reduce = 100%
+Ended Job = job_local853033479_0004
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+0
+Time taken: 1.692 seconds, Fetched: 1 row(s)
+OK
+Time taken: 0.088 seconds
+OK
+Time taken: 0.155 seconds
+OK
+Time taken: 0.283 seconds
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Query ID = root_20231013223747_7a5de5b2-e360-40b4-8754-3ceba1fc4d91
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2023-10-13 22:37:49,411 Stage-1 map = 0%,  reduce = 100%
+Ended Job = job_local2140505588_0005
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+0
+Time taken: 1.559 seconds, Fetched: 1 row(s)
+OK
+Time taken: 0.019 seconds
+OK
+Time taken: 0.172 seconds
+OK
+Time taken: 0.191 seconds
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Query ID = root_20231013223749_5deadd06-ae31-42c4-a386-19cabce01d6a
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2023-10-13 22:37:51,411 Stage-1 map = 0%,  reduce = 100%
+Ended Job = job_local1556466623_0006
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+0
+Time taken: 1.583 seconds, Fetched: 1 row(s)
+OK
+Time taken: 0.028 seconds
+OK
+Time taken: 0.121 seconds
+OK
+Time taken: 0.137 seconds
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Query ID = root_20231013223751_ce53e9ea-574d-4b90-bd1c-dc0b8c9464d3
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2023-10-13 22:37:53,409 Stage-1 map = 0%,  reduce = 100%
+Ended Job = job_local1656115673_0007
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+0
+Time taken: 1.671 seconds, Fetched: 1 row(s)
+OK
+Time taken: 0.028 seconds
+OK
+Time taken: 0.114 seconds
+OK
+Time taken: 0.207 seconds
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Query ID = root_20231013223753_e2dcdf52-4140-46b2-b4ad-3f8bc2aabb5c
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2023-10-13 22:37:55,357 Stage-1 map = 0%,  reduce = 100%
+Ended Job = job_local1643645650_0008
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+0
+Time taken: 1.582 seconds, Fetched: 1 row(s)
+OK
+Time taken: 0.06 seconds
+OK
+Time taken: 0.12 seconds
+OK
+Time taken: 0.198 seconds
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Query ID = root_20231013223755_c933d12e-45be-428a-b937-4ae247228219
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2023-10-13 22:37:57,446 Stage-1 map = 0%,  reduce = 100%
+Ended Job = job_local710345996_0009
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+0
+Time taken: 1.609 seconds, Fetched: 1 row(s)
+OK
+Time taken: 0.023 seconds
+OK
+Time taken: 0.117 seconds
+OK
+Time taken: 0.194 seconds
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Query ID = root_20231013223757_2f6b3f00-b5a2-435a-880d-291e509b8709
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2023-10-13 22:37:59,428 Stage-1 map = 0%,  reduce = 100%
+Ended Job = job_local2126322697_0010
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+0
+Time taken: 1.634 seconds, Fetched: 1 row(s)
+OK
+Time taken: 0.024 seconds
+OK
+Time taken: 0.112 seconds
+OK
+Time taken: 0.181 seconds
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Query ID = root_20231013223759_7db48d4e-e336-4a88-80e1-483d28b6f490
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2023-10-13 22:38:01,616 Stage-1 map = 0%,  reduce = 100%
+Ended Job = job_local740367608_0011
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+0
+Time taken: 1.847 seconds, Fetched: 1 row(s)
+root@404b59ede234:/opt# ls
+hadoop-2.7.4  hive
+root@404b59ede234:/opt# hive
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in file:/opt/hive/conf/hive-log4j2.properties Async: true
+Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+hive> ls
+    > ;
+NoViableAltException(24@[])
+	at org.apache.hadoop.hive.ql.parse.HiveParser.statement(HiveParser.java:1300)
+	at org.apache.hadoop.hive.ql.parse.ParseDriver.parse(ParseDriver.java:208)
+	at org.apache.hadoop.hive.ql.parse.ParseUtils.parse(ParseUtils.java:77)
+	at org.apache.hadoop.hive.ql.parse.ParseUtils.parse(ParseUtils.java:70)
+	at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:468)
+	at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1317)
+	at org.apache.hadoop.hive.ql.Driver.runInternal(Driver.java:1457)
+	at org.apache.hadoop.hive.ql.Driver.run(Driver.java:1237)
+	at org.apache.hadoop.hive.ql.Driver.run(Driver.java:1227)
+	at org.apache.hadoop.hive.cli.CliDriver.processLocalCmd(CliDriver.java:233)
+	at org.apache.hadoop.hive.cli.CliDriver.processCmd(CliDriver.java:184)
+	at org.apache.hadoop.hive.cli.CliDriver.processLine(CliDriver.java:403)
+	at org.apache.hadoop.hive.cli.CliDriver.executeDriver(CliDriver.java:821)
+	at org.apache.hadoop.hive.cli.CliDriver.run(CliDriver.java:759)
+	at org.apache.hadoop.hive.cli.CliDriver.main(CliDriver.java:686)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+FAILED: ParseException line 1:0 cannot recognize input near 'ls' '<EOF>' '<EOF>'
+hive> hive -ls &[16G[K/
+    > ;
+NoViableAltException(24@[])
+	at org.apache.hadoop.hive.ql.parse.HiveParser.statement(HiveParser.java:1300)
+	at org.apache.hadoop.hive.ql.parse.ParseDriver.parse(ParseDriver.java:208)
+	at org.apache.hadoop.hive.ql.parse.ParseUtils.parse(ParseUtils.java:77)
+	at org.apache.hadoop.hive.ql.parse.ParseUtils.parse(ParseUtils.java:70)
+	at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:468)
+	at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1317)
+	at org.apache.hadoop.hive.ql.Driver.runInternal(Driver.java:1457)
+	at org.apache.hadoop.hive.ql.Driver.run(Driver.java:1237)
+	at org.apache.hadoop.hive.ql.Driver.run(Driver.java:1227)
+	at org.apache.hadoop.hive.cli.CliDriver.processLocalCmd(CliDriver.java:233)
+	at org.apache.hadoop.hive.cli.CliDriver.processCmd(CliDriver.java:184)
+	at org.apache.hadoop.hive.cli.CliDriver.processLine(CliDriver.java:403)
+	at org.apache.hadoop.hive.cli.CliDriver.executeDriver(CliDriver.java:821)
+	at org.apache.hadoop.hive.cli.CliDriver.run(CliDriver.java:759)
+	at org.apache.hadoop.hive.cli.CliDriver.main(CliDriver.java:686)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+FAILED: ParseException line 1:0 cannot recognize input near 'hive' '-' 'ls'
+hive> SHOW DATABASES;
+OK
+default
+integrador
+Time taken: 0.319 seconds, Fetched: 2 row(s)
+hive> USE integrador;
+OK
+Time taken: 0.035 seconds
+hive> SHOW TABLES;
+OK
+calendario
+canal_venta
+cliente
+compra
+empleado
+gasto
+producto
+proveedor
+sucursal
+tipo_gasto
+venta
+Time taken: 0.083 seconds, Fetched: 11 row(s)
+hive> SELECT * FROM cliente;
+OK
+Time taken: 2.401 seconds
+hive> SELECT * FROM cliente;[28G[27G;[K[27G[26G;[K[26G[25G;[K[25G[24G;[K[24G[23G;[K[23G[22G;[K[22G[21G;[K[21G[20G;[K[20G[19G;[K[19G[18G;[K[18G[17G;[K[17G[16G;[K[16G[15G;[K[15G[14G;[K[14G[13G;[K[13G[12G;[K[12G[11G;[K[11G[10G;[K[10G[9G;[K[9G[8G;[K[8G[7G;[K[7G[KSHOW TABLES;[8G[KELECT * FROM cliente;g[29G[K[28G[K[27G[K[26G[K[25G[K[24G[K[23G[K[22G[K[21G[Kgasto;
+OK
+Time taken: 0.231 seconds
+hive> root@404b59ede234:/opt# exit;
+exit
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ sudo docker exec -it hive-server bash
+root@404b59ede234:/opt# exit;[1Phive
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in file:/opt/hive/conf/hive-log4j2.properties Async: true
+Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+hive> SELECT * FROM gasto;
+FAILED: SemanticException [Error 10001]: Line 1:14 Table not found 'gasto'
+hive> USE integrador;
+OK
+Time taken: 0.15 seconds
+hive> USE integrador;[7G[KSELECT * FROM gasto;
+OK
+Time taken: 2.016 seconds
+hive> SELECT * FROM gasto;[7G[KUSE integrador;[7G[KSELECT * FROM gasto;[21G[Kcliente;[8G[KHOW TABLES;[7G[KUSE integrador;[7G[KSHOW DATABASES;
+OK
+default
+integrador
+Time taken: 0.046 seconds, Fetched: 2 row(s)
+hive> SHOW DATABASES;[8G[KELECT * FROM gasto;[7G[KUSE integrador;[7G[KSELECT * FROM gasto;[21G[Kcliente;[8G[KHOW TABLES;
+OK
+calendario
+canal_venta
+cliente
+compra
+empleado
+gasto
+producto
+proveedor
+sucursal
+tipo_gasto
+venta
+Time taken: 0.081 seconds, Fetched: 11 row(s)
+hive> exit;
+root@404b59ede234:/opt# exit
+exit
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ exit
+logout
