@@ -14,7 +14,7 @@ WITH SERDEPROPERTIES (
     'separatorChar'=',',
     'skip.header.line.count'='1'
 )
-LOCATION '/user/instructor/integrador/compra';
+LOCATION '/data/compra';
 
 SELECT * FROM compra limit 10;
 SELECT COUNT(*) FROM compra;
@@ -32,7 +32,7 @@ WITH SERDEPROPERTIES (
     'separatorChar'=',',
     'skip.header.line.count'='1'
 )
-LOCATION '/user/instructor/integrador/gasto';
+LOCATION '/data/gasto';
 
 SELECT * FROM gasto limit 10;
 SELECT COUNT(*) FROM gasto;
@@ -48,7 +48,7 @@ WITH SERDEPROPERTIES (
     'separatorChar'=',',
     'skip.header.line.count'='1'
 )
-LOCATION '/user/instructor/integrador/tipodegasto';
+LOCATION '/data/tipodegasto';
 
 SELECT * FROM tipo_gasto limit 10;
 SELECT COUNT(*) FROM tipo_gasto;
@@ -71,7 +71,7 @@ WITH SERDEPROPERTIES (
     'separatorChar'=',',
     'skip.header.line.count'='1'
 )
-LOCATION '/user/instructor/integrador/venta';
+LOCATION '/data/venta';
 
 SELECT * FROM venta limit 10;
 SELECT COUNT(*) FROM venta;
@@ -86,7 +86,7 @@ WITH SERDEPROPERTIES (
     'separatorChar'=',',
     'skip.header.line.count'='1'
 )
-LOCATION '/user/instructor/integrador/canaldeventa';
+LOCATION '/data/canaldeventa';
 
 SELECT * FROM canal_venta;
 SELECT COUNT(*) FROM canal_venta;
@@ -109,7 +109,7 @@ WITH SERDEPROPERTIES (
     'separatorChar'=';',
     'skip.header.line.count'='1'
 )
-LOCATION '/user/instructor/integrador/cliente';
+LOCATION '/data/cliente';
 
 SELECT * FROM cliente;
 SELECT COUNT(*) FROM cliente;
@@ -126,7 +126,7 @@ WITH SERDEPROPERTIES (
     'separatorChar'=';',
     'skip.header.line.count'='1'
 )
-LOCATION '/user/instructor/integrador/producto';
+LOCATION '/data/producto';
 
 SELECT * FROM producto;
 SELECT COUNT(*) FROM producto;
@@ -146,7 +146,7 @@ WITH SERDEPROPERTIES (
     'separatorChar'=';',
     'skip.header.line.count'='1'
 )
-LOCATION '/user/instructor/integrador/empleado';
+LOCATION '/data/empleado';
 
 SELECT * FROM empleado;
 SELECT COUNT(*) FROM empleado;
@@ -166,7 +166,7 @@ WITH SERDEPROPERTIES (
     'separatorChar'=';',
     'skip.header.line.count'='1'
 )
-LOCATION '/user/instructor/integrador/sucursal';
+LOCATION '/data/sucursal';
 
 SELECT * FROM sucursal;
 SELECT COUNT(*) FROM sucursal;
@@ -188,7 +188,7 @@ WITH SERDEPROPERTIES (
     'separatorChar'=',',
     'skip.header.line.count'='1'
 )
-LOCATION '/user/instructor/integrador/calendario';
+LOCATION '/data/calendario';
 
 SELECT * FROM calendario;
 SELECT COUNT(*) FROM calendario;
@@ -208,7 +208,7 @@ WITH SERDEPROPERTIES (
     'separatorChar'=',',
     'skip.header.line.count'='1'
 )
-LOCATION '/user/instructor/integrador/proveedor';
+LOCATION '/data/proveedor';
 
 SELECT * FROM proveedor;
 SELECT COUNT(*) FROM proveedor;
