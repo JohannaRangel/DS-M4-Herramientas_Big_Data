@@ -1,0 +1,194 @@
+CREATE EXTERNAL TABLE IF NOT EXISTS compra (
+  IdCompra INTEGER,
+  Fecha DATE,
+  IdProducto INTEGER,
+  Cantidad INTEGER,
+  Precio FLOAT,
+  IdProveedor INTEGER
+)
+STORED AS PARQUET
+LOCATION '/parquet/compra'
+TBLPROPERTIES ('parquet.compression'='SNAPPY');
+
+
+INSERT INTO compra
+SELECT IdCompra,
+Fecha,
+IdProducto,
+Cantidad,
+Precio,
+IdProveedor
+FROM integrador.compra;
+
+select * from compra limit 10;
+---------------------------------------------------------
+
+CREATE EXTERNAL TABLE IF NOT EXISTS gasto (
+IdGasto INTEGER,
+IdSucursal INTEGER,
+Fecha DATE,
+Monto FLOAT)
+PARTITIONED BY(IdTipoGasto INTEGER)
+STORED AS PARQUET
+TBLPROPERTIES ('parquet.compression'='SNAPPY');
+
+INSERT INTO gasto
+PARTITION(IdTipoGasto=1)
+SELECT 
+IdGasto,
+IdSucursal,
+Fecha,
+Monto
+FROM integrador.gasto
+WHERE IdTipoGasto=1;
+
+INSERT INTO gasto
+PARTITION(IdTipoGasto=2)
+SELECT 
+IdGasto,
+IdSucursal,
+Fecha,
+Monto
+FROM integrador.gasto
+WHERE IdTipoGasto=2;
+
+INSERT INTO gasto
+PARTITION(IdTipoGasto=3)
+SELECT 
+IdGasto,
+IdSucursal,
+Fecha,
+Monto
+FROM integrador.gasto
+WHERE IdTipoGasto=3;
+
+INSERT INTO gasto
+PARTITION(IdTipoGasto=4)
+SELECT 
+IdGasto,
+IdSucursal,
+Fecha,
+Monto
+FROM integrador.gasto
+WHERE IdTipoGasto=4;
+
+select * from gasto;
+----------------------------------------------------------
+
+
+CREATE TABLE tipo_gasto
+STORED AS PARQUET
+TBLPROPERTIES ('parquet.compression' = 'SNAPPY')
+AS
+SELECT *
+FROM integrador.tipo_gasto;
+
+select * from tipo_gasto;
+
+-------------------------------------------------------
+
+CREATE TABLE venta
+STORED AS PARQUET
+TBLPROPERTIES ('parquet.compression' = 'SNAPPY')
+AS
+SELECT *
+FROM integrador.venta;
+
+select * from venta limit 10;
+
+--------------------------------------------------------
+
+
+CREATE TABLE canal_venta
+STORED AS PARQUET
+TBLPROPERTIES ('parquet.compression' = 'SNAPPY')
+AS
+SELECT *
+FROM integrador.canal_venta;
+
+select * from canal_venta limit 10;
+
+-----------------------------------------
+
+CREATE TABLE cliente
+STORED AS PARQUET
+TBLPROPERTIES ('parquet.compression' = 'SNAPPY')
+AS
+SELECT *
+FROM integrador.cliente;
+
+select * from cliente limit 10;
+-------------------------------------------------
+
+CREATE TABLE producto
+STORED AS PARQUET
+TBLPROPERTIES ('parquet.compression' = 'SNAPPY')
+AS
+SELECT *
+FROM integrador.producto;
+
+select * from producto limit 10;
+
+--------------------------------------------------
+
+CREATE TABLE empleado
+STORED AS PARQUET
+TBLPROPERTIES ('parquet.compression' = 'SNAPPY')
+AS
+SELECT *
+FROM integrador.empleado;
+
+select * from empleado limit 10;
+---------------------------------------------------
+
+CREATE TABLE sucursal
+STORED AS PARQUET
+TBLPROPERTIES ('parquet.compression' = 'SNAPPY')
+AS
+SELECT *
+FROM integrador.sucursal;
+
+select * from sucursal limit 10;
+
+-----------------------------------------------------
+
+CREATE TABLE calendario
+STORED AS PARQUET
+TBLPROPERTIES ('parquet.compression' = 'SNAPPY')
+AS
+SELECT *
+FROM integrador.calendario;
+
+select * from calendario limit 10;
+
+---------------------------------------------
+
+CREATE TABLE proveedor
+STORED AS PARQUET
+TBLPROPERTIES ('parquet.compression' = 'SNAPPY')
+AS
+SELECT *
+FROM integrador.proveedor;
+
+select * from proveedor limit 10;
+----------------------------------------------------
+
+CREATE EXTERNAL TABLE trips_part(
+bikeid INT,
+checkout_time STRING,
+duration_minutes INT,
+end_station_id INT,
+end_station_name STRING,
+start_station_id INT,
+start_station_name STRING,
+start_time TIMESTAMP,
+subscriber_type STRING,
+trip_id BIGINT,
+year INT)
+PARTITIONED BY(month INT);
+
+
+
+
+
+
