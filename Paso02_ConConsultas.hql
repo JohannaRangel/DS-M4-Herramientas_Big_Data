@@ -2,17 +2,16 @@ CREATE DATABASE integrador;
 USE integrador;
 DROP TABLE IF EXISTS compra;
 CREATE EXTERNAL TABLE IF NOT EXISTS compra (
-  IdCompra				INTEGER,
-  Fecha 				DATE,
-  IdProducto			INTEGER,
-  Cantidad			    INTEGER,
-  Precio				FLOAT,
-  IdProveedor			INTEGER
-)
+IdCompra INTEGER,
+Fecha DATE,
+IdProducto INTEGER,
+Cantidad INTEGER,
+Precio FLOAT,
+IdProveedor INTEGER)
 ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
 WITH SERDEPROPERTIES (
-    'separatorChar'=',',
-    'skip.header.line.count'='1'
+'separatorChar'=',',
+'skip.header.line.count'='1'
 )
 LOCATION '/data/compra';
 
