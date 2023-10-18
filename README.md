@@ -511,3 +511,9 @@ Con crontab, para que ejecute cada día a las 5 AM:
 ## 8) Herramientas de orquestación de flujos de datos
 
 https://github.com/sercasti/datalaketools
+https://github.com/account
+
+#### Alumnos que contribuyeron en realizar las prácticas y recopilar las [evidencias](DS-M4-Herramientas_Big_Data/Evidencia/):
+
+| [<img src="https://avatars.githubusercontent.com/u/37356058?v=4" width=115><br><sub>Johanna Rangel</sub>](https://github.com/camilafernanda) |  [<img src="https://avatars.githubusercontent.com/u/71970858?v=4" width=115><br><sub>Ellen Pimentel</sub>]([https://github.com/guilhermeonrails](https://github.com/ellenpimentel)) |  [<img src="https://avatars.githubusercontent.com/u/91544872?v=4" width=115><br><sub>Génesys Rondón</sub>](https://github.com/genesysaluralatam) |
+| :---: | :---: | :---: |
