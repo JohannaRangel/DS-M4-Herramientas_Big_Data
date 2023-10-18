@@ -515,5 +515,5 @@ https://github.com/account
 
 #### Alumnos que contribuyeron en realizar las prácticas y recopilar las [evidencias](DS-M4-Herramientas_Big_Data/Evidencia/):
 
-| [<img src="https://avatars.githubusercontent.com/u/37356058?v=4" width=115><br><sub>Johanna Rangel</sub>](https://github.com/camilafernanda) |  [<img src="https://avatars.githubusercontent.com/u/71970858?v=4" width=115><br><sub>Ellen Pimentel</sub>]([https://github.com/guilhermeonrails](https://github.com/ellenpimentel)) |  [<img src="https://avatars.githubusercontent.com/u/91544872?v=4" width=115><br><sub>Génesys Rondón</sub>](https://github.com/genesysaluralatam) |
+| [<img src="https://avatars.githubusercontent.com/JohannaRangel" width=115><br><sub>Johanna Rangel</sub>](https://github.com/camilafernanda) |  [<img src="https://avatars.githubusercontent.com/u/71970858?v=4" width=115><br><sub>Ellen Pimentel</sub>]([https://github.com/guilhermeonrails](https://github.com/ellenpimentel)) |  [<img src="https://avatars.githubusercontent.com/u/91544872?v=4" width=115><br><sub>Génesys Rondón</sub>](https://github.com/genesysaluralatam) |
 | :---: | :---: | :---: |
