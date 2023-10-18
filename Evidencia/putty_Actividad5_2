@@ -1,0 +1,1090 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2023.10.18 13:07:19 =~=~=~=~=~=~=~=~=~=~=~=
+login as: ubuntu
+ubuntu@192.168.1.26's password: 
+Welcome to Ubuntu 18.04.4 LTS (GNU/Linux 4.15.0-213-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ System information disabled due to load higher than 1.0
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+94 packages can be updated.
+1 update is a security update.
+
+New release '20.04.6 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Wed Oct 18 01:44:35 2023
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ sudo docker exec -it neo4j bash
+[sudo] password for ubuntu: 
+Error response from daemon: Container 808292061de39b4bb45c13dae6e21a81f8266fb122c29c725413a6116eed0f29 is not running
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ sudo docker exec -it neo4j bash[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Ksudo docker exec -it hive-server bashcp iris.hql hive-server:/opt/iris.hql[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kcd ..sudo docker cp mongo-java-driver-3.12.11.jar hive-serveer:/opt/hive/lib/mongo-java-driver-3.12.11.jar[Acd ..[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo docker cp mongo-java-driver-3.12.11.jar hive-serveer:/opt/hive/lib/mongo-java-driver-3.12.11.jar[A[Chadoop-spark-2.0.2.jar hive-server[2P:/opt/hive/lib/mongo-hadoop-spark-2.0.2.jar[A[C[C[C[C[C[C[C[C[C[Ccore-2.0.2.jar hive-server:[2P/opt/hive/lib/mongo-hadoop-core-2.0.2.jar[A[C[C[C[C[C[C[C[C[C[C[C[Chiv
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chive-2.0.2.jar[Als[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd Mongols[Ksudo docker exec -it mongodb bashps[Kexec -it mongodb bashps[Kexec -it mongodb bashps[Kexec -it mongodb bash[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd ..[Ksudo docker cp /home/ubuntu/DS-M4-Herramientas_Big_Dataa/Datasets/iris.json mongodb:/data/iris.json[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kstart 808292061de39b4bb45c13dae6e21a81f82666fb122c29c725413a6116eed0f29
+808292061de39b4bb45c13dae6e21a81f8266fb122c29c725413a6116eed0f29
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ sudo docker start 808292061de39b4bb45c13dae6e21a81f82666fb122c29c725413a6116eed0f29[A[C[C[C[C[C[C[C[C[C[C[23Pexec -it neo4j bash
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004hroot@808292061de3:/var/lib/neo4j# [7mcypher-shell[27mcypher-shell
+[?2004l[31mConnection refused[m
+[?2004hroot@808292061de3:/var/lib/neo4j# ]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ ubuntu[K[K[K[K[K[Ksudo docker exec -it neo4j bash
+Error response from daemon: Container 808292061de39b4bb45c13dae6e21a81f8266fb122c29c725413a6116eed0f29 is not running
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ sudo docker exec -it neo4j bashstart 808292061de39b4bb45c13dae6e21a81f82666fb122c29c725413a6116eed0f29[A[C[C[C[C[C[C[C[C[C[C[23Pexec -it neo4j bash
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ksudo docker exec -it neo4j bashstart 808292061de39b4bb45c13dae6e21a81f82666fb122c29c725413a6116eed0f29[A[C[C[C[C[C[C[C[C[C[C[23Pexec -it neo4j bash
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstart 808292061de39b4bb45c13dae6e21a81f82666fb122c29c725413a6116eed0f29
+808292061de39b4bb45c13dae6e21a81f8266fb122c29c725413a6116eed0f29
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ sudo docker ps
+CONTAINER ID   IMAGE                                                    COMMAND                  CREATED        STATUS                   PORTS                                                                                            NAMES
+808292061de3   neo4j:latest                                             "tini -g -- /startup…"   45 hours ago   Up 9 seconds             0.0.0.0:7474->7474/tcp, :::7474->7474/tcp, 7473/tcp, 0.0.0.0:7687->7687/tcp, :::7687->7687/tcp   neo4j
+d4d63e93f5d4   bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8   "/entrypoint.sh /run…"   5 days ago     Up 3 minutes (healthy)   8088/tcp                                                                                         resourcemanager
+18e6cdf0715b   bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8     "/entrypoint.sh /run…"   5 days ago     Up 3 minutes (healthy)   8188/tcp                                                                                         historyserver
+6dc7be8c4f41   bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /run…"   5 days ago     Up 3 minutes (healthy)   0.0.0.0:9870->9870/tcp, :::9870->9870/tcp, 0.0.0.0:9010->9000/tcp, :::9010->9000/tcp             namenode
+1785245a7b31   bde2020/hadoop-nodemanager:2.0.0-hadoop3.2.1-java8       "/entrypoint.sh /run…"   5 days ago     Up 3 minutes (healthy)   8042/tcp                                                                                         nodemanager
+a64ac55c37b7   bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /run…"   5 days ago     Up 3 minutes (healthy)   0.0.0.0:9864->9864/tcp, :::9864->9864/tcp                                                        datanode
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ [K]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ sudo docker ps
+CONTAINER ID   IMAGE                                                    COMMAND                  CREATED        STATUS                   PORTS                                                                                            NAMES
+808292061de3   neo4j:latest                                             "tini -g -- /startup…"   45 hours ago   Up 22 seconds            0.0.0.0:7474->7474/tcp, :::7474->7474/tcp, 7473/tcp, 0.0.0.0:7687->7687/tcp, :::7687->7687/tcp   neo4j
+d4d63e93f5d4   bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8   "/entrypoint.sh /run…"   5 days ago     Up 3 minutes (healthy)   8088/tcp                                                                                         resourcemanager
+18e6cdf0715b   bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8     "/entrypoint.sh /run…"   5 days ago     Up 4 minutes (healthy)   8188/tcp                                                                                         historyserver
+6dc7be8c4f41   bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /run…"   5 days ago     Up 4 minutes (healthy)   0.0.0.0:9870->9870/tcp, :::9870->9870/tcp, 0.0.0.0:9010->9000/tcp, :::9010->9000/tcp             namenode
+1785245a7b31   bde2020/hadoop-nodemanager:2.0.0-hadoop3.2.1-java8       "/entrypoint.sh /run…"   5 days ago     Up 4 minutes (healthy)   8042/tcp                                                                                         nodemanager
+a64ac55c37b7   bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /run…"   5 days ago     Up 4 minutes (healthy)   0.0.0.0:9864->9864/tcp, :::9864->9864/tcp                                                        datanode
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ sudo docker ps-ps
+unknown shorthand flag: 'p' in -ps
+See 'docker --help'.
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/home/ubuntu/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST
+                           env var and default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/home/ubuntu/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/home/ubuntu/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/home/ubuntu/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+
+[1mTo get more help with docker, check out our guides at https://docs.docker.com/go/guides/[0m
+
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ sudo docker -ps[K[K[Kls
+docker: 'ls' is not a docker command.
+See 'docker --help'
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ sudo docker ls-ls
+Unable to parse logging level: s
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ sudo docker -ls[1Pls-ps[1Pps
+CONTAINER ID   IMAGE                                                    COMMAND                  CREATED      STATUS                   PORTS                                                                                  NAMES
+d4d63e93f5d4   bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8   "/entrypoint.sh /run…"   5 days ago   Up 5 minutes (healthy)   8088/tcp                                                                               resourcemanager
+18e6cdf0715b   bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8     "/entrypoint.sh /run…"   5 days ago   Up 6 minutes (healthy)   8188/tcp                                                                               historyserver
+6dc7be8c4f41   bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /run…"   5 days ago   Up 6 minutes (healthy)   0.0.0.0:9870->9870/tcp, :::9870->9870/tcp, 0.0.0.0:9010->9000/tcp, :::9010->9000/tcp   namenode
+1785245a7b31   bde2020/hadoop-nodemanager:2.0.0-hadoop3.2.1-java8       "/entrypoint.sh /run…"   5 days ago   Up 6 minutes (healthy)   8042/tcp                                                                               nodemanager
+a64ac55c37b7   bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /run…"   5 days ago   Up 5 minutes (healthy)   0.0.0.0:9864->9864/tcp, :::9864->9864/tcp                                              datanode
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ sudo docker -h[C -hd -hf -h[C[C[C
+Flag shorthand -h has been deprecated, please use --help
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/home/ubuntu/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST
+                           env var and default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/home/ubuntu/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/home/ubuntu/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/home/ubuntu/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+
+[1mTo get more help with docker, check out our guides at https://docs.docker.com/go/guides/[0m
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ sudo docker df -h[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P
+Filesystem                         Size  Used Avail Use% Mounted on
+udev                               964M     0  964M   0% /dev
+tmpfs                              200M  1.4M  198M   1% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv   20G   16G  3.2G  84% /
+tmpfs                              997M     0  997M   0% /dev/shm
+tmpfs                              5.0M     0  5.0M   0% /run/lock
+tmpfs                              997M     0  997M   0% /sys/fs/cgroup
+/dev/loop0                         106M  106M     0 100% /snap/core/16202
+/dev/sda2                          974M  152M  755M  17% /boot
+tmpfs                              200M     0  200M   0% /run/user/1000
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ df -h[12@sudo docker [C[C[C[C[C[3Pps[C^C
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ sudo docker ps
+CONTAINER ID   IMAGE                                                    COMMAND                  CREATED      STATUS                   PORTS                                                                                  NAMES
+d4d63e93f5d4   bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8   "/entrypoint.sh /run…"   5 days ago   Up 7 minutes (healthy)   8088/tcp                                                                               resourcemanager
+18e6cdf0715b   bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8     "/entrypoint.sh /run…"   5 days ago   Up 8 minutes (healthy)   8188/tcp                                                                               historyserver
+6dc7be8c4f41   bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /run…"   5 days ago   Up 8 minutes (healthy)   0.0.0.0:9870->9870/tcp, :::9870->9870/tcp, 0.0.0.0:9010->9000/tcp, :::9010->9000/tcp   namenode
+1785245a7b31   bde2020/hadoop-nodemanager:2.0.0-hadoop3.2.1-java8       "/entrypoint.sh /run…"   5 days ago   Up 8 minutes (healthy)   8042/tcp                                                                               nodemanager
+a64ac55c37b7   bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /run…"   5 days ago   Up 8 minutes (healthy)   0.0.0.0:9864->9864/tcp, :::9864->9864/tcp                                              datanode
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ sudo docker ps -a
+CONTAINER ID   IMAGE                                                    COMMAND                  CREATED        STATUS                       PORTS                                                                                  NAMES
+86eaff5e1a38   bde2020/hive:2.3.2-postgresql-metastore                  "entrypoint.sh /bin/…"   45 hours ago   Exited (255) 9 minutes ago   0.0.0.0:10000->10000/tcp, :::10000->10000/tcp, 10002/tcp                               hive-server
+808292061de3   neo4j:latest                                             "tini -g -- /startup…"   45 hours ago   Exited (1) 4 minutes ago                                                                                            neo4j
+d19696062871   bde2020/hbase-master:1.0.0-hbase1.2.6                    "/entrypoint.sh /run…"   45 hours ago   Exited (255) 9 minutes ago   16000/tcp, 0.0.0.0:16010->16010/tcp, :::16010->16010/tcp                               hbase-master
+087810bbc885   bde2020/hbase-regionserver:1.0.0-hbase1.2.6              "/entrypoint.sh /run…"   45 hours ago   Exited (255) 9 minutes ago   16020/tcp, 0.0.0.0:16030->16030/tcp, :::16030->16030/tcp                               hbase-regionserver
+04f2c3a7d400   mongo:latest                                             "docker-entrypoint.s…"   45 hours ago   Exited (255) 9 minutes ago   0.0.0.0:27017->27017/tcp, :::27017->27017/tcp                                          mongodb
+4f842dd7a867   zookeeper:3.4.10                                         "/docker-entrypoint.…"   45 hours ago   Exited (255) 9 minutes ago   2888/tcp, 0.0.0.0:2181->2181/tcp, :::2181->2181/tcp, 3888/tcp                          zoo
+1265c17a7604   bde2020/hive-metastore-postgresql:2.3.0                  "/docker-entrypoint.…"   5 days ago     Exited (255) 9 minutes ago   0.0.0.0:5432->5432/tcp, :::5432->5432/tcp                                              hive-metastore-postgresql
+8d9fa6f82504   bde2020/hive:2.3.2-postgresql-metastore                  "entrypoint.sh /opt/…"   5 days ago     Exited (255) 9 minutes ago   10000/tcp, 0.0.0.0:9083->9083/tcp, :::9083->9083/tcp, 10002/tcp                        hive-metastore
+d4d63e93f5d4   bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8   "/entrypoint.sh /run…"   5 days ago     Up 8 minutes (healthy)       8088/tcp                                                                               resourcemanager
+18e6cdf0715b   bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8     "/entrypoint.sh /run…"   5 days ago     Up 8 minutes (healthy)       8188/tcp                                                                               historyserver
+6dc7be8c4f41   bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /run…"   5 days ago     Up 8 minutes (healthy)       0.0.0.0:9870->9870/tcp, :::9870->9870/tcp, 0.0.0.0:9010->9000/tcp, :::9010->9000/tcp   namenode
+1785245a7b31   bde2020/hadoop-nodemanager:2.0.0-hadoop3.2.1-java8       "/entrypoint.sh /run…"   5 days ago     Up 8 minutes (healthy)       8042/tcp                                                                               nodemanager
+a64ac55c37b7   bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /run…"   5 days ago     Up 8 minutes (healthy)       0.0.0.0:9864->9864/tcp, :::9864->9864/tcp                                              datanode
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ sudo docker ps -a[C[C[C[K[K[K[K[Kstop $[C[C (sudo docker -[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ksudo docker stop $(sudo docker ps -a -q)
+86eaff5e1a38
+808292061de3
+d19696062871
+087810bbc885
+04f2c3a7d400
+4f842dd7a867
+1265c17a7604
+8d9fa6f82504
+d4d63e93f5d4
+18e6cdf0715b
+6dc7be8c4f41
+1785245a7b31
+a64ac55c37b7
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ sudo docker stop $(sudo docker ps -a -q)ps -a[K[K[9Pdf -hsudo docker ps -a[K
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ sudo docker prune
+docker: 'prune' is not a docker command.
+See 'docker --help'
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ sudo docker prune [C[1@ [1@c[1@o[1@n[1@t[1@a[1@i[1@n[1@e[1@r
+WARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+86eaff5e1a38e76b4ffdbdf2de3e5b2bdaa8ce1b0e758a42df662b6723c9b6f5
+808292061de39b4bb45c13dae6e21a81f8266fb122c29c725413a6116eed0f29
+d19696062871f6fd702d4104d0fb0f9204cc8b6e88ceb93b54a4d0cd772fcd7c
+087810bbc885b06f0d35cd995ce9d35fc44b9aab608c556df895a434cb8f559c
+04f2c3a7d400c1f8703c3733d947e1833f819ea3da0976ecf5cdb1b333492454
+4f842dd7a867adaf40fb05a519bc31f0da344a258825c1ebdf1d224624fc22b8
+1265c17a76049ccf7cd3a023abccae577f15e044589fc698b3289a144f2dad35
+8d9fa6f825041ea11df60c023c339fbe15bfc0f7bfe9cd701d156b462d2842ad
+d4d63e93f5d427a41e3d6306e1be061e0d4570086eb53f1c16faeb1399024458
+18e6cdf0715b4e550a1895345f8a8ee37675c4879f34060c3d3c803caf53a4bf
+6dc7be8c4f41713e0e0e76d1609b6ffd67122d3510687dbf607acd53f2cd7718
+1785245a7b31dd738b1cda03efdfa7f9ea10ca487cfdf6c1ecc664bf8404aceb
+a64ac55c37b70f2996b8c5b3ed94b8f2099b2e841992f9c22132fdfa625a4936
+
+Total reclaimed space: 298.8MB
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ sudo docker container prune [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdf -h
+Filesystem                         Size  Used Avail Use% Mounted on
+udev                               964M     0  964M   0% /dev
+tmpfs                              200M  1.1M  199M   1% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv   20G   16G  3.5G  82% /
+tmpfs                              997M     0  997M   0% /dev/shm
+tmpfs                              5.0M     0  5.0M   0% /run/lock
+tmpfs                              997M     0  997M   0% /sys/fs/cgroup
+/dev/loop0                         106M  106M     0 100% /snap/core/16202
+/dev/sda2                          974M  152M  755M  17% /boot
+tmpfs                              200M     0  200M   0% /run/user/1000
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ df -h[K[K[K[K[Ksudo docker-compose -f docker-compose-v2.yml up -d[1@3[1@-[C[C[C[C[C[C[C[C[C[C[C
+[31mERROR[0m: .IOError: [Errno 2] No such file or directory: u'./docker-compose-v3-2.yml'
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ sudo docker-compose -f docker-compose-v3-2.yml up -d
+[31mERROR[0m: .IOError: [Errno 2] No such file or directory: u'./docker-compose-v3-2.yml'
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ ls
+[0m[01;34mDS-M4-Cluster_Hadoop[0m  [01;34mDS-M4-Herramientas_Big_Data[0m  [01;34mDS-M4-Hue_Hive[0m  [01;34mDS-M4-PgAdmin_Postgres[0m  [01;34mdockerdata[0m
+]0;ubuntu@servidor_ubuntu: ~ubuntu@servidor_ubuntu:~$ cd DS-M4-Herramientas_Big_Data
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ cd DS-M4-Herramientas_Big_Datals[Ksudo docker-compose -f docker-compose-v3-2.yml up -d
+Creating nodemanager ... 
+Creating datanode ... 
+Creating resourcemanager ... 
+Creating nodemanager
+Creating historyserver ... 
+Creating hive-metastore ... 
+Creating datanode
+Creating resourcemanager
+Creating zoo ... 
+Creating mongodb ... 
+Creating hbase-master ... 
+Creating neo4j ... 
+Creating historyserver
+Creating namenode ... 
+Creating hbase-regionserver ... 
+Creating hive-metastore
+Creating hbase-master
+Creating zoo
+Creating mongodb
+Creating neo4j
+Creating hive-metastore-postgresql ... 
+Creating hbase-regionserver
+Creating namenode
+Creating hive-metastore-postgresql
+[1A[2KCreating nodemanager ... [32mdone[0m[1B[1A[2KCreating resourcemanager ... [32mdone[0m[1B[1A[2KCreating historyserver ... [32mdone[0m[1B[1A[2KCreating datanode ... [32mdone[0m[1B[1A[2KCreating hbase-regionserver ... [32mdone[0m[1B[1A[2KCreating hive-metastore ... [32mdone[0m[1B[1A[2KCreating hive-metastore-postgresql ... [32mdone[0m[1B[1A[2KCreating hbase-master ... [32mdone[0m[1B[1A[2KCreating zoo ... [32mdone[0m[1B[1A[2KCreating namenode ... [32mdone[0m[1BCreating hive-server ... 
+Creating hive-server
+[1A[2KCreating mongodb ... [32mdone[0m[1B[1A[2KCreating neo4j ... [32mdone[0m[1B[1A[2KCreating hive-server ... [32mdone[0m[1B]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ ^[[200~sudo docker exec -it neo4j bash~[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ksudo docker exec -it neo4j bash
+[?2004hroot@2f527e5e7872:/var/lib/neo4j# [7mcypher-shell[27mcypher-shell
+[?2004l[31mConnection refused[m
+[?2004hroot@2f527e5e7872:/var/lib/neo4j# cd..   ..
+[?2004l[?2004hroot@2f527e5e7872:/var/lib# cd ..
+[?2004l[?2004hroot@2f527e5e7872:/var# cd ..
+[?2004l[?2004hroot@2f527e5e7872:/# cd ..
+[?2004l[?2004hroot@2f527e5e7872:/# cd ..     [7mcypher-shell[27mcypher-shell
+[?2004l[31mConnection refused[m
+[?2004hroot@2f527e5e7872:/# [7msudo docker exec -it neo4j bash[27mroot@2f527e5e7872:/# sudo docker exec -it neo4j bash
+[?2004lbash: sudo: command not found
+[?2004hroot@2f527e5e7872:/# exit
+[?2004lexit
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ sudo docker exec -it neo4j bash
+[?2004hroot@2f527e5e7872:/var/lib/neo4j# exitsudo docker exec -it neo4j bash[19Pcypher-shell
+[?2004lusername: ubunt     usuario : neo4j
+password: 
+[31mThe client is unauthorized due to authentication failure.[m
+[?2004hroot@2f527e5e7872:/var/lib/neo4j# neo   cypher-shell
+[?2004lusername: neo4j
+password: 
+[31mThe client is unauthorized due to authentication failure.[m
+[?2004hroot@2f527e5e7872:/var/lib/neo4j# neo4    cypher-shell
+[?2004lusername: neo4j
+password: 
+Connected to Neo4j using Bolt protocol version 5.3 at [1mneo4j://localhost:7687[m as user [1mneo4j[m.
+Type [1m:help[m for a list of available commands or [1m:exit[m to exit the shell.
+Note that Cypher queries must end with a [1msemicolon.[m
+[?1h=[?2004h[1mneo4j@neo4j[0m> CREATE (a:Location {name: 'A'}),
+                           (b:Location {name: 'B'}),
+                           (c:Location {name: 'C'}),
+                           (d:Location {name: 'D'}),
+                           (e:Location {name: 'E'}),
+                           (f:Location {name: 'F'}),
+                           (a)-[:ROAD {cost: 50}]->(b),
+                           (b)-[:ROAD {cost: 50}]->(a),
+                           (a)-[:ROAD {cost: 50}]->(c),
+                           (c)-[:ROAD {cost: 50}]->(a),
+                           (a)-[:ROAD {cost: 100}]->(d),
+                           (d)-[:ROAD {cost: 100}]->(a),
+                           (b)-[:ROAD {cost: 40}]->(d),
+                           (d)-[:ROAD {cost: 40}]->(b),
+                           (c)-[:ROAD {cost: 40}]->(d),
+                           (d)-[:ROAD {cost: 40}]->(c),
+                           (c)-[:ROAD {cost: 80}]->(e),
+                           (e)-[:ROAD {cost: 80}]->(c),
+                           (d)-[:ROAD {cost: 30}]->(e),
+                           (e)-[:ROAD {cost: 30}]->(d),
+                           (d)-[:ROAD {cost: 80}]->(f),
+                           (f)-[:ROAD {cost: 80}]->(d),
+                           (e)-[:ROAD {cost: 40}]->(f),
+                           (f)-[:ROAD {cost: 40}]->(e);
+[?1l>[?1000l[?2004l0 rows
+ready to start consuming query after 1478 ms, results consumed after another 0 ms
+Added 6 nodes, Created 18 relationships, Set 24 properties, Added 6 labels
+[?1h=[?2004h[1mneo4j@neo4j[0m> CALL gds.graph.project(
+                        'miGrafo',
+                        'Location',
+                        'ROAD',
+                        {
+                            relationshipProperties: 'cost'
+                        }
+                    )
+             ;
+[?1l>[?1000l[?2004l+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| nodeProjection                                  | relationshipProjection                                                                                                                                                          | graphName | nodeCount | relationshipCount | projectMillis |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| {Location: {properties: {}, label: "Location"}} | {ROAD: {aggregation: "DEFAULT", orientation: "NATURAL", type: "ROAD", properties: {cost: {property: "cost", aggregation: "DEFAULT", defaultValue: NULL}}, indexInverse: FALSE}} | "miGrafo" | 6         | 18                | 1974          |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+1 row
+ready to start consuming query after 266 ms, results consumed after another 2061 ms
+[?1h=[?2004h[1mneo4j@neo4j[0m> MATCH (l:Location) RETURN l;
+[?1l>[?1000l[?2004l+-------------------------+
+| l                       |
++-------------------------+
+| (:Location {name: "A"}) |
+| (:Location {name: "B"}) |
+| (:Location {name: "C"}) |
+| (:Location {name: "D"}) |
+| (:Location {name: "E"}) |
+| (:Location {name: "F"}) |
++-------------------------+
+
+6 rows
+ready to start consuming query after 468 ms, results consumed after another 31 ms
+[?1h=[?2004h[1mneo4j@neo4j[0m> MATCH (source:Location {name: 'A'}), (target:Location {name: 'E'});
+[?1l>[?1000l[?2004l[31mQuery cannot conclude with MATCH (must be a RETURN clause, an update clause, a unit subquery call, or a procedure call with no YIELD) (line 1, column 1 (offset: 0))
+"MATCH (source:Location {name: 'A'}), (target:Location {name: 'E'})"
+ ^[m
+[?1h=[?2004h[1mneo4j@neo4j[0m> MATCH (source:Location {name: 'A'}), (target:Location {name: 'E'})
+                    CALL gds.shortestPath.dijkstra.write.estimate('miGrafo', {
+                        sourceNode: source,
+                        targetNode: target,
+                        relationshipWeightProperty: 'cost',
+                        writeRelationshipType: 'PATH'
+                    })
+                    YIELD nodeCount, relationshipCount, bytesMin, bytesMax, requiredMemory
+                    RETURN nodeCount, relationshipCount, bytesMin, bytesMax, requiredMemory
+             ;
+[?1l>[?1000l[?2004l+----------------------------------------------------------------------+
+| nodeCount | relationshipCount | bytesMin | bytesMax | requiredMemory |
++----------------------------------------------------------------------+
+| 6         | 18                | 952      | 952      | "952 Bytes"    |
++----------------------------------------------------------------------+
+
+1 row
+ready to start consuming query after 585 ms, results consumed after another 37 ms
+[?1h=[?2004h[1mneo4j@neo4j[0m> MATCH (source:Location {name: 'A'}), (target:Location {name: 'E'})
+                    CALL gds.shortestPath.dijkstra.stream('miGrafo', {
+                        sourceNode: source,
+                        targetNode: target,
+                        relationshipWeightProperty: 'cost'
+                    })
+                    YIELD index, sourceNode, targetNode, totalCost, nodeIds, costs, path
+                    RETURN
+                        index,
+                        gds.util.asNode(sourceNode).name AS sourceNodeName,
+                        gds.util.asNode(targetNode).name AS targetNodeName,
+                        totalCost,
+                        [nodeId IN nodeIds | gds.util.asNode(nodeId).name] AS nodeNames,
+                        costs,
+                        nodes(path) as path
+                    ORDER BY index
+             ;
+[?1l>[?1000l[?2004l+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| index | sourceNodeName | targetNodeName | totalCost | nodeNames            | costs                    | path                                                                                                 |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 0     | "A"            | "E"            | 120.0     | ["A", "B", "D", "E"] | [0.0, 50.0, 90.0, 120.0] | [(:Location {name: "A"}), (:Location {name: "B"}), (:Location {name: "D"}), (:Location {name: "E"})] |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+1 row
+ready to start consuming query after 934 ms, results consumed after another 103 ms
+[?1h=[?2004h[1mneo4j@neo4j[0m> MATCH (n:Location {name: 'A'})
+                    CALL gds.alpha.spanningTree.minimum.write('miGrafo', {
+                      startNodeId: id(n),
+                      relationshipWeightProperty: 'cost',
+                      writeProperty: 'MINST',
+                      weightWriteProperty: 'writeCost'
+                    })
+                    YIELD preProcessingMillis, computeMillis, writeMillis, effectiveNodeCount
+                    RETURN preProcessingMillis, computeMillis, writeMillis, effectiveNodeCount;
+[?1l>[?1000l[?2004l[31mThere is no procedure with the name `gds.alpha.spanningTree.minimum.write` registered for this database instance. Please ensure you've spelled the procedure name correctly and that the procedure is properly deployed.[m
+[?1h=[?2004h[1mneo4j@neo4j[0m> MATCH (n:Location {name: 'A'})
+                    CALL gds.alpha.spanningTree.minimum.write('miGrafo', {
+                      startNodeId: id(n),
+                      relationshipWeightProperty: 'cost',
+                      writeProperty: 'MINST',
+                      weightWriteProperty: 'writeCost'
+                    })
+                    YIELD preProcessingMillis, computeMillis, writeMillis, effectiveNodeCount
+                    RETURN preProcessingMillis, computeMillis, writeMillis, effectiveNodeCount;
+[?1l>[?1000l[?2004l[31mThere is no procedure with the name `gds.alpha.spanningTree.minimum.write` registered for this database instance. Please ensure you've spelled the procedure name correctly and that the procedure is properly deployed.[m
+[?1h=[?2004h[1mneo4j@neo4j[0m> MATCH (g:Graph {name: 'miGrafo'})
+             RETURN g;
+[?1l>[?1000l[?2004l+---+
+| g |
++---+
++---+
+
+0 rows
+ready to start consuming query after 81 ms, results consumed after another 1 ms
+[?1h=[?2004h[1mneo4j@neo4j[0m> MATCH (n:Node) WHERE (n)-[]-(:Graph {name: 'miGrafo'})
+             RETURN n;
+[?1l>[?1000l[?2004l+---+
+| n |
++---+
++---+
+
+0 rows
+ready to start consuming query after 512 ms, results consumed after another 1 ms
+[?1h=[?2004h[1mneo4j@neo4j[0m> MATCH ()-[r]-() WHERE ()-[:IN_GRAPH]->(:Graph {name: 'miGrafo'})
+             RETURN r;
+[?1l>[?1000l[?2004l+---+
+| r |
++---+
++---+
+
+0 rows
+ready to start consuming query after 275 ms, results consumed after another 21 ms
+[?1h=[?2004h[1mneo4j@neo4j[0m> exit;
+[?1l>[?1000l[?2004l[31mInvalid input 'exit': expected
+  "ALTER"
+  "CALL"
+  "CREATE"
+  "DEALLOCATE"
+  "DELETE"
+  "DENY"
+  "DETACH"
+  "DROP"
+  "DRYRUN"
+  "ENABLE"
+  "FOREACH"
+  "GRANT"
+  "LOAD"
+  "MATCH"
+  "MERGE"
+  "OPTIONAL"
+  "REALLOCATE"
+  "REMOVE"
+  "RENAME"
+  "RETURN"
+  "REVOKE"
+  "SET"
+  "SHOW"
+  "START"
+  "STOP"
+  "TERMINATE"
+  "UNWIND"
+  "USE"
+  "USING"
+  "WITH" (line 1, column 1 (offset: 0))
+"exit"
+ ^[m
+[?1h=[?2004h[1mneo4j@neo4j[0m> exit
+             ;
+[?1l>[?1000l[?2004l[31mInvalid input 'exit': expected
+  "ALTER"
+  "CALL"
+  "CREATE"
+  "DEALLOCATE"
+  "DELETE"
+  "DENY"
+  "DETACH"
+  "DROP"
+  "DRYRUN"
+  "ENABLE"
+  "FOREACH"
+  "GRANT"
+  "LOAD"
+  "MATCH"
+  "MERGE"
+  "OPTIONAL"
+  "REALLOCATE"
+  "REMOVE"
+  "RENAME"
+  "RETURN"
+  "REVOKE"
+  "SET"
+  "SHOW"
+  "START"
+  "STOP"
+  "TERMINATE"
+  "UNWIND"
+  "USE"
+  "USING"
+  "WITH" (line 1, column 1 (offset: 0))
+"exit"
+ ^[m
+[?1h=[?2004h[1mneo4j@neo4j[0m> 
+[?1l>[?1000l[?2004l[31mInterrupted (Note that Cypher queries must end with a [m[31;1msemicolon[m[31m. Type [m[31;1m:exit[m[31m to exit the shell.)[m
+[?1h=[?2004h[1mneo4j@neo4j[0m> exit
+             ;
+[?1l>[?1000l[?2004l[31mInvalid input 'exit': expected
+  "ALTER"
+  "CALL"
+  "CREATE"
+  "DEALLOCATE"
+  "DELETE"
+  "DENY"
+  "DETACH"
+  "DROP"
+  "DRYRUN"
+  "ENABLE"
+  "FOREACH"
+  "GRANT"
+  "LOAD"
+  "MATCH"
+  "MERGE"
+  "OPTIONAL"
+  "REALLOCATE"
+  "REMOVE"
+  "RENAME"
+  "RETURN"
+  "REVOKE"
+  "SET"
+  "SHOW"
+  "START"
+  "STOP"
+  "TERMINATE"
+  "UNWIND"
+  "USE"
+  "USING"
+  "WITH" (line 1, column 1 (offset: 0))
+"exit"
+ ^[m
+[?1h=[?2004h[1mneo4j@neo4j[0m> :exit
+[?1l>[?1000l[?2004l
+Bye!
+[?2004hroot@2f527e5e7872:/var/lib/neo4j# le s
+[?2004lLICENSE.txt   NOTICE.txt  UPGRADE.txt  certificates  data    labs  licenses  packaging_info  run
+LICENSES.txt  README.txt  bin	       conf	     import  lib   logs      plugins
+[?2004hroot@2f527e5e7872:/var/lib/neo4j# [7mcypher-shell[27mcypher-shell
+[?2004lusername: neo4h j
+password: 
+Connected to Neo4j using Bolt protocol version 5.3 at [1mneo4j://localhost:7687[m as user [1mneo4j[m.
+Type [1m:help[m for a list of available commands or [1m:exit[m to exit the shell.
+Note that Cypher queries must end with a [1msemicolon.[m
+[?1h=[?2004h[1mneo4j@neo4j[0m> MATCH (n:Location {name: 'A'})
+                    CALL gds.alpha.spanningTree.minimum.write('miGrafo', {
+                      startNodeId: id(n),
+                      relationshipWeightProperty: 'cost',
+                      writeProperty: 'MINST',
+                      weightWriteProperty: 'writeCost'
+                    })
+                    YIELD preProcessingMillis, computeMillis, writeMillis, effectiveNodeCount
+                    RETURN preProcessingMillis, computeMillis, writeMillis, effectiveNodeCount;
+[?1l>[?1000l[?2004l[31mThere is no procedure with the name `gds.alpha.spanningTree.minimum.write` registered for this database instance. Please ensure you've spelled the procedure name correctly and that the procedure is properly deployed.[m
+[?1h=[?2004h[1mneo4j@neo4j[0m> MATCH (source:Location {name: 'A'}), (target:Location {name: 'E'})
+                    CALL gds.shortestPath.dijkstra.write.estimate('miGrafo', {
+                        sourceNode: source,
+                        targetNode: target,
+                        relationshipWeightProperty: 'cost',
+                        writeRelationshipType: 'PATH'
+                    })
+                    YIELD nodeCount, relationshipCount, bytesMin, bytesMax, requiredMemory
+                    RETURN nodeCount, relationshipCount, bytesMin, bytesMax, requiredMemory;
+[?1l>[?1000l[?2004l+----------------------------------------------------------------------+
+| nodeCount | relationshipCount | bytesMin | bytesMax | requiredMemory |
++----------------------------------------------------------------------+
+| 6         | 18                | 952      | 952      | "952 Bytes"    |
++----------------------------------------------------------------------+
+
+1 row
+ready to start consuming query after 89 ms, results consumed after another 4 ms
+[?1h=[?2004h[1mneo4j@neo4j[0m> CREATE (a:Location {name: 'A'}),
+                           (b:Location {name: 'B'}),
+                           (c:Location {name: 'C'}),
+                           (d:Location {name: 'D'}),
+                           (e:Location {name: 'E'}),
+                           (f:Location {name: 'F'}),
+                           (a)-[:ROAD {cost: 50}]->(b),
+                           (b)-[:ROAD {cost: 50}]->(a),
+                           (a)-[:ROAD {cost: 50}]->(c),
+                           (c)-[:ROAD {cost: 50}]->(a),
+                           (a)-[:ROAD {cost: 100}]->(d),
+                           (d)-[:ROAD {cost: 100}]->(a),
+                           (b)-[:ROAD {cost: 40}]->(d),
+                           (d)-[:ROAD {cost: 40}]->(b),
+                           (c)-[:ROAD {cost: 40}]->(d),
+                           (d)-[:ROAD {cost: 40}]->(c),
+                           (c)-[:ROAD {cost: 80}]->(e),
+                           (e)-[:ROAD {cost: 80}]->(c),
+                           (d)-[:ROAD {cost: 30}]->(e),
+                           (e)-[:ROAD {cost: 30}]->(d),
+                           (d)-[:ROAD {cost: 80}]->(f),
+                           (f)-[:ROAD {cost: 80}]->(d),
+                           (e)-[:ROAD {cost: 40}]->(f),
+                           (f)-[:ROAD {cost: 40}]->(e);
+[?1l>[?1000l[?2004l0 rows
+ready to start consuming query after 12 ms, results consumed after another 0 ms
+Added 6 nodes, Created 18 relationships, Set 24 properties, Added 6 labels
+[?1h=[?2004h[1mneo4j@neo4j[0m> CALL gds.graph.project(
+                        'miGrafo',
+                        'Location',
+                        'ROAD',
+                        {
+                            relationshipProperties: 'cost'
+                        }
+                    )
+             
+                    MATCH (l:Location) RETURN l;
+[?1l>[?1000l[?2004l[31mProcedure call inside a query does not support naming results implicitly (name explicitly using `YIELD` instead) (line 1, column 1 (offset: 0))
+"CALL gds.graph.project("
+ ^[m
+[?1h=[?2004h[1mneo4j@neo4j[0m> (e)-[:ROAD {cost: 40}]->(f),(f)-[:ROAD {cost: 40}]->(e);
+[?1l>[?1000l[?2004l[31mInvalid input '(': expected
+  "ALTER"
+  "CALL"
+  "CREATE"
+  "DEALLOCATE"
+  "DELETE"
+  "DENY"
+  "DETACH"
+  "DROP"
+  "DRYRUN"
+  "ENABLE"
+  "FOREACH"
+  "GRANT"
+  "LOAD"
+  "MATCH"
+  "MERGE"
+  "OPTIONAL"
+  "REALLOCATE"
+  "REMOVE"
+  "RENAME"
+  "RETURN"
+  "REVOKE"
+  "SET"
+  "SHOW"
+  "START"
+  "STOP"
+  "TERMINATE"
+  "UNWIND"
+  "USE"
+  "USING"
+  "WITH" (line 1, column 1 (offset: 0))
+"(e)-[:ROAD {cost: 40}]->(f),(f)-[:ROAD {cost: 40}]->(e)"
+ ^[m
+[?1h=[?2004h[1mneo4j@neo4j[0m> MATCH (g:Graph {name: 'miGrafo'}) RETURN g;
+[?1l>[?1000l[?2004l+---+
+| g |
++---+
++---+
+
+0 rows
+ready to start consuming query after 43 ms, results consumed after another 1 ms
+[?1h=[?2004h[1mneo4j@neo4j[0m> MATCH (l:Location)
+             RETURN l;
+             
+[?1l>[?1000l[?2004l+-------------------------+
+| l                       |
++-------------------------+
+| (:Location {name: "A"}) |
+| (:Location {name: "B"}) |
+| (:Location {name: "C"}) |
+| (:Location {name: "D"}) |
+| (:Location {name: "E"}) |
+| (:Location {name: "F"}) |
+| (:Location {name: "A"}) |
+| (:Location {name: "B"}) |
+| (:Location {name: "C"}) |
+| (:Location {name: "D"}) |
+| (:Location {name: "E"}) |
+| (:Location {name: "F"}) |
++-------------------------+
+
+12 rows
+ready to start consuming query after 23 ms, results consumed after another 5 ms
+[?1h=[?2004h[1mneo4j@neo4j[0m> MATCH ()-[:ROAD]->()
+             RETURN count(*) as numberOfRoads;
+[?1l>[?1000l[?2004l+---------------+
+| numberOfRoads |
++---------------+
+| 36            |
++---------------+
+
+1 row
+ready to start consuming query after 89 ms, results consumed after another 0 ms
+[?1h=[?2004h[1mneo4j@neo4j[0m> CALL gds.graph.project(
+                        'miGrafo',
+                        'Location',
+                        'ROAD',
+                        {
+                            relationshipProperties: 'cost'
+                        }
+                    )
+             
+                    MATCH (l:Location) RETURN l;
+[?1l>[?1000l[?2004l[31mProcedure call inside a query does not support naming results implicitly (name explicitly using `YIELD` instead) (line 1, column 1 (offset: 0))
+"CALL gds.graph.project("
+ ^[m
+[?1h=[?2004h[1mneo4j@neo4j[0m> CALL gds.graph.project(
+               'miGrafo',
+               'Location',
+               'ROAD',
+               {
+                 relationshipProperties: 'cost'
+               });
+             
+             MATCH (l:Location)
+             RETURN l;
+             
+[?1l>[?1000l[?2004l+-----------------------------------------------------------------------------------------------------+
+| nodeProjection | relationshipProjection | graphName | nodeCount | relationshipCount | projectMillis |
++-----------------------------------------------------------------------------------------------------+
+[31mFailed to invoke procedure `gds.graph.project`: Caused by: java.lang.IllegalArgumentException: A graph with name 'miGrafo' already exists.[m
+[?1h=[?2004h[1mneo4j@neo4j[0m> CALL gds.graph.drop('miGrafo');
+             
+[?1l>[?1000l[?2004l+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| graphName | database | memoryUsage | sizeInBytes | nodeCount | relationshipCount | configuration | density | creationTime                            | modificationTime                        | schema                                                                                                                                 | schemaWithOrientation                                                                                                                                                       |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| "miGrafo" | "neo4j"  | ""          | -1          | 6         | 18                | {}            | 0.6     | 2023-10-18T18:35:56.845250209Z[Etc/UTC] | 2023-10-18T18:35:58.862829480Z[Etc/UTC] | {graphProperties: {}, relationships: {ROAD: {cost: "Float (DefaultValue(NaN), PERSISTENT, Aggregation.NONE)"}}, nodes: {Location: {}}} | {graphProperties: {}, relationships: {ROAD: {properties: {cost: "Float (DefaultValue(NaN), PERSISTENT, Aggregation.NONE)"}, direction: "DIRECTED"}}, nodes: {Location: {}}} |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+1 row
+ready to start consuming query after 144 ms, results consumed after another 21 ms
+[?1h=[?2004h[1mneo4j@neo4j[0m> CREATE (a:Location {name: 'A'}),
+                           (b:Location {name: 'B'}),
+                           (c:Location {name: 'C'}),
+                           (d:Location {name: 'D'}),
+                           (e:Location {name: 'E'}),
+                           (f:Location {name: 'F'}),
+                           (a)-[:ROAD {cost: 50}]->(b),
+                           (b)-[:ROAD {cost: 50}]->(a),
+                           (a)-[:ROAD {cost: 50}]->(c),
+                           (c)-[:ROAD {cost: 50}]->(a),
+                           (a)-[:ROAD {cost: 100}]->(d),
+                           (d)-[:ROAD {cost: 100}]->(a),
+                           (b)-[:ROAD {cost: 40}]->(d),
+                           (d)-[:ROAD {cost: 40}]->(b),
+                           (c)-[:ROAD {cost: 40}]->(d),
+                           (d)-[:ROAD {cost: 40}]->(c),
+                           (c)-[:ROAD {cost: 80}]->(e),
+                           (e)-[:ROAD {cost: 80}]->(c),
+                           (d)-[:ROAD {cost: 30}]->(e),
+                           (e)-[:ROAD {cost: 30}]->(d),
+                           (d)-[:ROAD {cost: 80}]->(f),
+                           (f)-[:ROAD {cost: 80}]->(d),
+                           (e)-[:ROAD {cost: 40}]->(f),
+                           (f)-[:ROAD {cost: 40}]->(e);
+[?1l>[?1000l[?2004l0 rows
+ready to start consuming query after 5 ms, results consumed after another 0 ms
+Added 6 nodes, Created 18 relationships, Set 24 properties, Added 6 labels
+[?1h=[?2004h[1mneo4j@neo4j[0m> CREATE (a:Location {name: 'A'}),
+                           (b:Location {name: 'B'}),
+                           (c:Location {name: 'C'}),
+                           (d:Location {name: 'D'}),
+                           (e:Location {name: 'E'}),
+                           (f:Location {name: 'F'}),
+                           (a)-[:ROAD {cost: 50}]->(b),
+                           (b)-[:ROAD {cost: 50}]->(a),
+                           (a)-[:ROAD {cost: 50}]->(c),
+                           (c)-[:ROAD {cost: 50}]->(a),
+                           (a)-[:ROAD {cost: 100}]->(d),
+                           (d)-[:ROAD {cost: 100}]->(a),
+                           (b)-[:ROAD {cost: 40}]->(d),
+                           (d)-[:ROAD {cost: 40}]->(b),
+                           (c)-[:ROAD {cost: 40}]->(d),
+                           (d)-[:ROAD {cost: 40}]->(c),
+                           (c)-[:ROAD {cost: 80}]->(e),
+                           (e)-[:ROAD {cost: 80}]->(c),
+                           (d)-[:ROAD {cost: 30}]->(e),
+                           (e)-[:ROAD {cost: 30}]->(d),
+                           (d)-[:ROAD {cost: 80}]->(f),
+                           (f)-[:ROAD {cost: 80}]->(d),
+                           (e)-[:ROAD {cost: 40}]->(f),
+                           (f)-[:ROAD {cost: 40}]->(e);[A
+[55C[23A[42D[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[23A[13CMATCH (l:Location)
+             RETURN l;
+             
+[?1l>[?1000l[?2004l+-------------------------+
+| l                       |
++-------------------------+
+| (:Location {name: "A"}) |
+| (:Location {name: "B"}) |
+| (:Location {name: "C"}) |
+| (:Location {name: "D"}) |
+| (:Location {name: "E"}) |
+| (:Location {name: "F"}) |
+| (:Location {name: "A"}) |
+| (:Location {name: "B"}) |
+| (:Location {name: "C"}) |
+| (:Location {name: "D"}) |
+| (:Location {name: "E"}) |
+| (:Location {name: "F"}) |
+| (:Location {name: "A"}) |
+| (:Location {name: "B"}) |
+| (:Location {name: "C"}) |
+| (:Location {name: "D"}) |
+| (:Location {name: "E"}) |
+| (:Location {name: "F"}) |
++-------------------------+
+
+18 rows
+ready to start consuming query after 3 ms, results consumed after another 7 ms
+[?1h=[?2004h[1mneo4j@neo4j[0m> CALL gds.graph.project(
+                 'myGraph',
+                 'Location',
+                 'ROAD',
+                 {
+                     relationshipProperties: 'cost'
+                 }
+             );
+[?1l>[?1000l[?2004l+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| nodeProjection                                  | relationshipProjection                                                                                                                                                          | graphName | nodeCount | relationshipCount | projectMillis |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| {Location: {properties: {}, label: "Location"}} | {ROAD: {aggregation: "DEFAULT", orientation: "NATURAL", type: "ROAD", properties: {cost: {property: "cost", aggregation: "DEFAULT", defaultValue: NULL}}, indexInverse: FALSE}} | "myGraph" | 18        | 54                | 41            |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+1 row
+ready to start consuming query after 42 ms, results consumed after another 49 ms
+[?1h=[?2004h[1mneo4j@neo4j[0m> MATCH (source:Location {name: 'A'}), (target:Location {name: 'F'})
+             CALL gds.shortestPath.dijkstra.write.estimate('myGraph', {
+                 sourceNode: source,
+                 targetNode: target,
+                 relationshipWeightProperty: 'cost',
+                 writeRelationshipType: 'PATH'
+             })
+             YIELD nodeCount, relationshipCount, bytesMin, bytesMax, requiredMemory
+             RETURN nodeCount, relationshipCount, bytesMin, bytesMax, requiredMemory;
+[?1l>[?1000l[?2004l+----------------------------------------------------------------------+
+| nodeCount | relationshipCount | bytesMin | bytesMax | requiredMemory |
++----------------------------------------------------------------------+
+| 18        | 54                | 1432     | 1432     | "1432 Bytes"   |
+| 18        | 54                | 1432     | 1432     | "1432 Bytes"   |
+| 18        | 54                | 1432     | 1432     | "1432 Bytes"   |
+| 18        | 54                | 1432     | 1432     | "1432 Bytes"   |
+| 18        | 54                | 1432     | 1432     | "1432 Bytes"   |
+| 18        | 54                | 1432     | 1432     | "1432 Bytes"   |
+| 18        | 54                | 1432     | 1432     | "1432 Bytes"   |
+| 18        | 54                | 1432     | 1432     | "1432 Bytes"   |
+| 18        | 54                | 1432     | 1432     | "1432 Bytes"   |
++----------------------------------------------------------------------+
+
+9 rows
+ready to start consuming query after 75 ms, results consumed after another 21 ms
+[?1h=[?2004h[1mneo4j@neo4j[0m> MATCH (source:Location {name: 'A'}), (target:Location {name: 'F'})
+             CALL gds.shortestPath.dijkstra.stream('myGraph', {
+                 sourceNode: source,
+                 targetNode: target,
+                 relationshipWeightProperty: 'cost'
+             })
+             YIELD index, sourceNode, targetNode, totalCost, nodeIds, costs, path
+             RETURN
+                 index,
+                 gds.util.asNode(sourceNode).name AS sourceNodeName,
+                 gds.util.asNode(targetNode).name AS targetNodeName,
+                 totalCost,
+                 [nodeId IN nodeIds | gds.util.asNode(nodeId).name] AS nodeNames,
+                 costs,
+                 nodes(path) as path
+             ORDER BY index;
+[?1l>[?1000l[?2004l+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| index | sourceNodeName | targetNodeName | totalCost | nodeNames                 | costs                           | path                                                                                                                          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 0     | "A"            | "F"            | 160.0     | ["A", "B", "D", "E", "F"] | [0.0, 50.0, 90.0, 120.0, 160.0] | [(:Location {name: "A"}), (:Location {name: "B"}), (:Location {name: "D"}), (:Location {name: "E"}), (:Location {name: "F"})] |
+| 0     | "A"            | "F"            | 160.0     | ["A", "B", "D", "E", "F"] | [0.0, 50.0, 90.0, 120.0, 160.0] | [(:Location {name: "A"}), (:Location {name: "B"}), (:Location {name: "D"}), (:Location {name: "E"}), (:Location {name: "F"})] |
+| 0     | "A"            | "F"            | 160.0     | ["A", "B", "D", "E", "F"] | [0.0, 50.0, 90.0, 120.0, 160.0] | [(:Location {name: "A"}), (:Location {name: "B"}), (:Location {name: "D"}), (:Location {name: "E"}), (:Location {name: "F"})] |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+3 rows
+ready to start consuming query after 119 ms, results consumed after another 121 ms
+[?1h=[?2004h[1mneo4j@neo4j[0m> CREATE (a:Place {id: 'A'}),
+                    (b:Place {id: 'B'}),
+                    (c:Place {id: 'C'}),
+                    (d:Place {id: 'D'}),
+                    (e:Place {id: 'E'}),
+                    (f:Place {id: 'F'}),
+                    (g:Place {id: 'G'}),
+                    (d)-[:LINK {cost:4}]->(b),
+                    (d)-[:LINK {cost:6}]->(e),
+                    (b)-[:LINK {cost:1}]->(a),
+                    (b)-[:LINK {cost:3}]->(c),
+                    (a)-[:LINK {cost:2}]->(c),
+                    (c)-[:LINK {cost:5}]->(e),
+                    (f)-[:LINK {cost:1}]->(g);
+[?1l>[?1000l[?2004l0 rows
+ready to start consuming query after 346 ms, results consumed after another 0 ms
+Added 7 nodes, Created 7 relationships, Set 14 properties, Added 7 labels
+[?1h=[?2004h[1mneo4j@neo4j[0m> MATCH (l:Location)
+             RETURN l;
+             [A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[P[P[P[P[P[P[P[P[1@P[1@l[1@a[1@z[1@a[P[P[1@c[1@e
+
+[13C
+[?1l>[?1000l[?2004l+--------------------+
+| l                  |
++--------------------+
+| (:Place {id: "A"}) |
+| (:Place {id: "B"}) |
+| (:Place {id: "C"}) |
+| (:Place {id: "D"}) |
+| (:Place {id: "E"}) |
+| (:Place {id: "F"}) |
+| (:Place {id: "G"}) |
++--------------------+
+
+7 rows
+ready to start consuming query after 77 ms, results consumed after another 14 ms
+[?1h=[?2004h[1mneo4j@neo4j[0m> CALL gds.graph.project(
+               'graph',
+               'Place',
+               {
+                 LINK: {
+                   properties: 'cost',
+                   orientation: 'UNDIRECTED'
+                 }
+               }
+             );
+[?1l>[?1000l[?2004l+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| nodeProjection                            | relationshipProjection                                                                                                                                                             | graphName | nodeCount | relationshipCount | projectMillis |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| {Place: {properties: {}, label: "Place"}} | {LINK: {aggregation: "DEFAULT", orientation: "UNDIRECTED", type: "LINK", properties: {cost: {property: "cost", aggregation: "DEFAULT", defaultValue: NULL}}, indexInverse: FALSE}} | "graph"   | 7         | 14                | 69            |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+1 row
+ready to start consuming query after 156 ms, results consumed after another 88 ms
+[?1h=[?2004h[1mneo4j@neo4j[0m> MATCH (n:Place {id: 'D'})
+             CALL gds.spanningTree.stats.estimate('graph', {sourceNode: id(n),relationshipWeightProperty:'cost'})
+             YIELD nodeCount, relationshipCount, bytesMin, bytesMax, requiredMemory
+             RETURN nodeCount, relationshipCount, bytesMin, bytesMax, requiredMemory;
+[?1l>[?1000l[?2004l[31mThere is no procedure with the name `gds.spanningTree.stats.estimate` registered for this database instance. Please ensure you've spelled the procedure name correctly and that the procedure is properly deployed.[m
+[?1h=[?2004h[1mneo4j@neo4j[0m> MATCH (n:Place{id: 'D'})
+             CALL gds.spanningTree.stream('graph', {
+               sourceNode: n,
+               relationshipWeightProperty: 'cost'
+             })
+             YIELD nodeId,parentId, weight
+             RETURN gds.util.asNode(nodeId).id AS node, gds.util.asNode(parentId).id AS parent,weight
+             ORDER BY node;
+[?1l>[?1000l[?2004l[31mThere is no procedure with the name `gds.spanningTree.stream` registered for this database instance. Please ensure you've spelled the procedure name correctly and that the procedure is properly deployed.[m
+[?1h=[?2004h[1mneo4j@neo4j[0m> MATCH (n:Place{id: 'D'})
+             CALL gds.spanningTree.stats('graph', {
+               sourceNode: n,
+               relationshipWeightProperty: 'cost'
+             })
+             YIELD effectiveNodeCount, totalWeight
+             RETURN effectiveNodeCount, totalWeight;[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[50C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[15C[K)[3A[25C
+
+
+[15C;
+[?1l>[?1000l[?2004l[31mThere is no procedure with the name `gds.spanningTree.stats` registered for this database instance. Please ensure you've spelled the procedure name correctly and that the procedure is properly deployed.[m
+[?1h=[?2004h[1mneo4j@neo4j[0m> :exit
+[?1l>[?1000l[?2004l
+Bye!
+[?2004hroot@2f527e5e7872:/var/lib/neo4j# exit
+[?2004lexit
+]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ clear
+[3J[H[2J]0;ubuntu@servidor_ubuntu: ~/DS-M4-Herramientas_Big_Dataubuntu@servidor_ubuntu:~/DS-M4-Herramientas_Big_Data$ 
